@@ -1,0 +1,1 @@
+sudo ln -s /var/lib/flatpak/exports/bin/com.google.AndroidStudio /usr/bin/android-studio
