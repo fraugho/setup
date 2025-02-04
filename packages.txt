@@ -1695,7 +1695,6 @@ perl-IPC-Open3.noarch
 perl-JSON-XS
 perl-MIME-Base32.noarch
 perl-MIME-Base64
-perl-Mozilla-CA.noarch
 perl-NDBM_File
 perl-Net-SSLeay
 perl-POSIX
@@ -39678,6 +39677,7 @@ perl-MouseX-StrictConstructor.noarch
 perl-MouseX-Types.noarch
 perl-MouseX-Types-Common.noarch
 perl-MouseX-Types-Path-Class.noarch
+perl-Mozilla-CA.noarch
 perl-Mozilla-CA-tests.noarch
 perl-Mozilla-PublicSuffix.noarch
 perl-MusicBrainz-DiscID
