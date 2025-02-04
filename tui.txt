@@ -1,0 +1,19 @@
+yazi - file manager
+
+perf - perf recorder
+
+gdb - debug
+
+rust-gdb - debug
+
+rainfrog - tui db interface
+
+lazydocker - tui docker interface
+
+posting - tui postman aka api hitter
+
+eza - better ls
+
+xev - keyboard event
+
+evtest - keyboard event
