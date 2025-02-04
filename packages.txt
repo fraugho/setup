@@ -1640,6 +1640,7 @@ pango
 pangomm
 pangomm2.48
 paps
+parallel.noarch
 parted
 passim
 passim-libs
@@ -1715,6 +1716,7 @@ perl-Term-Cap.noarch
 perl-TermReadKey
 perl-Text-ParseWords.noarch
 perl-Text-Tabs+Wrap.noarch
+perl-Thread-Queue.noarch
 perl-Time-HiRes
 perl-Time-Local.noarch
 perl-Types-Serialiser.noarch
@@ -1737,6 +1739,8 @@ perl-overloading.noarch
 perl-parent.noarch
 perl-podlators.noarch
 perl-srpm-macros.noarch
+perl-threads
+perl-threads-shared
 perl-vars.noarch
 pigz
 pinentry
@@ -37066,7 +37070,6 @@ pappl-retrofit-devel
 paprefs
 par
 par2cmdline
-parallel.noarch
 paratype-pt-mono-fonts.noarch
 paratype-pt-serif-caption-fonts.noarch
 paratype-pt-serif-fonts.noarch
@@ -40850,7 +40853,6 @@ perl-Text-vFile-asData.noarch
 perl-Text-xSV.noarch
 perl-TheSchwartz.noarch
 perl-Thread.noarch
-perl-Thread-Queue.noarch
 perl-Thread-Queue-tests.noarch
 perl-Thread-Semaphore.noarch
 perl-Thread-SigMask
@@ -41304,9 +41306,7 @@ perl-subs.noarch
 perl-sword
 perl-syntax.noarch
 perl-tests
-perl-threads
 perl-threads-lite
-perl-threads-shared
 perl-threads-shared-tests
 perl-threads-tests
 perl-thrift.noarch
