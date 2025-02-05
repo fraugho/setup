@@ -31,6 +31,7 @@ PackageKit-gtk3-module
 SDL2
 SDL2
 SDL2_image
+Xaw3d
 aajohan-comfortaa-fonts.noarch
 aardvark-dns
 abattis-cantarell-fonts.noarch
@@ -170,6 +171,8 @@ capstone
 cargo
 catatonit
 cdparanoia-libs
+chafa
+chafa-libs
 checkpolicy
 chkconfig
 chrony
@@ -244,6 +247,7 @@ dbus-tools
 dbus-x11
 dconf
 dconf
+ddcutil
 debugedit
 default-editor.noarch
 default-fonts-am.noarch
@@ -326,6 +330,7 @@ dhcp-client
 dhcp-common.noarch
 diffutils
 distribution-gpg-keys.noarch
+distrobox.noarch
 djvulibre-libs
 dleyna
 dleyna-connector-dbus
@@ -394,6 +399,7 @@ f41-backgrounds-base.noarch
 f41-backgrounds-gnome.noarch
 fakeroot
 fakeroot-libs
+fastfetch
 fcft
 fdk-aac-free
 fdk-aac-free
@@ -423,6 +429,7 @@ firewalld.noarch
 firewalld-filesystem.noarch
 flac-libs
 flac-libs
+flamegraph.noarch
 flashrom
 flatpak
 flatpak-libs
@@ -445,6 +452,7 @@ fpc-srpm-macros.noarch
 fprintd
 fprintd-pam
 freeglut
+freeipmi
 freerdp-libs
 freetype
 freetype
@@ -650,9 +658,11 @@ google-noto-serif-vf-fonts.noarch
 gperftools-libs
 gpgme
 gpgmepp
+gpm-libs
 graphene
 graphite2
 graphite2
+graphviz
 graphviz-libs
 grep
 grilo
@@ -704,6 +714,7 @@ gtkmm3.0
 gtkmm4.0
 gtksourceview4
 gtksourceview5
+gts
 gupnp
 gupnp-av
 gupnp-dlna
@@ -711,6 +722,7 @@ gupnp-igd
 gutenprint
 gutenprint-cups
 gutenprint-libs
+gv
 gvfs
 gvfs-afc
 gvfs-afp
@@ -727,6 +739,7 @@ gzip
 harfbuzz
 harfbuzz
 harfbuzz-icu
+hddtemp
 hdparm
 hfsplus-tools
 hicolor-icon-theme.noarch
@@ -760,6 +773,7 @@ hyprland
 hyprlang
 hyprpicker
 hyprutils
+i2c-tools
 i3
 i3-config.noarch
 i3lock
@@ -797,7 +811,9 @@ intel-gpu-firmware.noarch
 intel-mediasdk
 intel-vpl-gpu-rt
 intel-vsc-firmware.noarch
+inxi.noarch
 ipcalc
+ipmitool
 ipp-usb
 iproute
 iproute-tc
@@ -878,6 +894,7 @@ ladspa
 lame-libs
 lame-libs
 langtable.noarch
+lasi
 lcms2
 lcms2
 leptonica
@@ -933,6 +950,7 @@ libXt
 libXtst
 libXtst
 libXv
+libXxf86dga
 libXxf86vm
 libXxf86vm
 liba52
@@ -1108,6 +1126,7 @@ libgxps
 libhandy
 libhangul
 libheif
+libi2c
 libibverbs
 libical
 libical-glib
@@ -1337,6 +1356,7 @@ libusal
 libusb1
 libusb1
 libusbmuxd
+libuser
 libutempter
 libuuid
 libuuid
@@ -1440,6 +1460,7 @@ llhttp
 llvm-libs
 llvm-libs
 llvm18-libs
+lm_sensors
 lm_sensors-libs
 lm_sensors-libs
 lmdb-libs
@@ -1449,6 +1470,8 @@ loupe
 low-memory-monitor
 lpcnetfreedv
 lrzsz
+lsb_release.noarch
+lsd
 lsof
 lttng-ust
 lua-libs
@@ -1554,6 +1577,7 @@ neovim
 net-snmp-libs
 net-tools
 netavark
+netpbm
 nettle
 nettle
 network-manager-applet
@@ -1667,18 +1691,29 @@ perl-AutoLoader.noarch
 perl-B
 perl-Carp.noarch
 perl-Class-Struct.noarch
+perl-Clone
+perl-Compress-Raw-Bzip2
+perl-Compress-Raw-Zlib
+perl-Cpanel-JSON-XS
+perl-Data-Dump.noarch
 perl-Data-Dumper
 perl-Digest.noarch
+perl-Digest-HMAC.noarch
 perl-Digest-MD5
+perl-Digest-SHA
 perl-DynaLoader
 perl-Encode
+perl-Encode-Locale.noarch
 perl-Errno
 perl-Error.noarch
 perl-Exporter.noarch
 perl-Fcntl
 perl-File-Basename.noarch
+perl-File-Copy.noarch
 perl-File-Find.noarch
+perl-File-Listing.noarch
 perl-File-Path.noarch
+perl-File-Slurper.noarch
 perl-File-Temp.noarch
 perl-File-stat.noarch
 perl-FileHandle.noarch
@@ -1687,18 +1722,35 @@ perl-Getopt-Long.noarch
 perl-Getopt-Std.noarch
 perl-Git.noarch
 perl-Guard
+perl-HTML-Parser
+perl-HTML-Tagset.noarch
+perl-HTTP-Cookies.noarch
+perl-HTTP-Date.noarch
+perl-HTTP-Message.noarch
+perl-HTTP-Negotiate.noarch
 perl-HTTP-Tiny.noarch
+perl-I18N-Langinfo
 perl-IO
+perl-IO-Compress.noarch
+perl-IO-Compress-Brotli
+perl-IO-HTML.noarch
 perl-IO-Socket-IP.noarch
 perl-IO-Socket-SSL.noarch
 perl-IPC-Open3.noarch
 perl-JSON-XS
+perl-LWP-MediaTypes.noarch
 perl-MIME-Base32.noarch
 perl-MIME-Base64
+perl-Math-BigInt.noarch
+perl-Math-Complex.noarch
+perl-Module-Load.noarch
 perl-NDBM_File
+perl-NTLM.noarch
+perl-Net-HTTP.noarch
 perl-Net-SSLeay
 perl-POSIX
 perl-PathTools
+perl-PerlIO-utf8_strict
 perl-Pod-Escapes.noarch
 perl-Pod-Perldoc.noarch
 perl-Pod-Simple.noarch
@@ -1708,6 +1760,7 @@ perl-SelectSaver.noarch
 perl-Socket
 perl-Storable
 perl-Symbol.noarch
+perl-Sys-Hostname
 perl-Sys-Syslog
 perl-Task-Weaken.noarch
 perl-Term-ANSIColor.noarch
@@ -1718,9 +1771,14 @@ perl-Text-Tabs+Wrap.noarch
 perl-Thread-Queue.noarch
 perl-Time-HiRes
 perl-Time-Local.noarch
+perl-TimeDate.noarch
+perl-Try-Tiny.noarch
 perl-Types-Serialiser.noarch
 perl-URI.noarch
 perl-Unicode-Normalize
+perl-WWW-RobotRules.noarch
+perl-XML-Dumper.noarch
+perl-XML-Parser
 perl-base.noarch
 perl-common-sense
 perl-constant.noarch
@@ -1730,6 +1788,7 @@ perl-interpreter
 perl-lib
 perl-libnet.noarch
 perl-libs
+perl-libwww-perl.noarch
 perl-locale.noarch
 perl-mro
 perl-open.noarch
@@ -1738,6 +1797,7 @@ perl-overloading.noarch
 perl-parent.noarch
 perl-podlators.noarch
 perl-srpm-macros.noarch
+perl-subs.noarch
 perl-threads
 perl-threads-shared
 perl-vars.noarch
@@ -1786,6 +1846,7 @@ poppler-glib
 poppler-utils
 popt
 ppp
+pprof.noarch
 pptp
 procps-ng
 protobuf
@@ -1820,6 +1881,7 @@ python3-cffi
 python3-charset-normalizer.noarch
 python3-click.noarch
 python3-click-plugins.noarch
+python3-colorama.noarch
 python3-crypt-r
 python3-crypto
 python3-cryptography
@@ -1894,6 +1956,7 @@ python3-rpmautospec-core.noarch
 python3-satyr
 python3-setools
 python3-setuptools.noarch
+python3-shtab.noarch
 python3-simpleaudio
 python3-simpleline.noarch
 python3-six.noarch
@@ -1902,6 +1965,7 @@ python3-speechd
 python3-systemd
 python3-tempita.noarch
 python3-tenacity.noarch
+python3-termcolor.noarch
 python3-typing-extensions.noarch
 python3-unbound
 python3-urllib3.noarch
@@ -2095,6 +2159,7 @@ spice-vdagent
 spice-webdavd
 spirv-tools-libs
 spirv-tools-libs
+sqlite
 sqlite-libs
 sqlite-libs
 squashfs-tools
@@ -2157,6 +2222,7 @@ tigervnc-server-minimal
 time
 tini-static
 tiwilink-firmware.noarch
+tldr.noarch
 tmux
 tomlplusplus
 toolbox
@@ -2206,6 +2272,7 @@ usb_modeswitch-data.noarch
 usbmuxd
 usbredir
 usbutils
+usermode
 userspace-rcu
 utf8proc
 util-linux
@@ -2214,7 +2281,10 @@ vamp-plugin-sdk
 vapoursynth-libs
 vazirmatn-vf-fonts.noarch
 vid.stab
+vim-common
 vim-data.noarch
+vim-enhanced
+vim-filesystem.noarch
 vim-minimal
 virglrenderer
 virt-what
@@ -2249,6 +2319,7 @@ wireplumber-libs
 wl-clipboard
 wlr-randr
 wlroots
+wmctrl
 wmenu
 woff2
 wofi
@@ -2272,6 +2343,7 @@ xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils.noarch
+xdpyinfo
 xdriinfo
 xen-libs
 xen-licenses
@@ -2293,11 +2365,13 @@ xorg-x11-server-Xwayland
 xorg-x11-xauth
 xorg-x11-xinit
 xprop
+xrandr
 xrdb
 xsel
 xss-lock
 xterm
 xvidcore
+xxd
 xxhash-libs
 xz
 xz-libs
@@ -2306,6 +2380,7 @@ yajl
 yelp
 yelp-libs
 yelp-xsl.noarch
+yyjson
 zchunk-libs
 zenity
 zeromq
@@ -3614,7 +3689,6 @@ WindowMaker-extra.noarch
 WoeUSB
 XStatic-Angular-common.noarch
 XStatic-Magic-Search-common.noarch
-Xaw3d
 Xaw3d
 Xaw3d-devel
 Xaw3d-devel
@@ -6510,10 +6584,8 @@ cgreen
 cgreen-devel
 cgreen-devel
 cgreen-runner
-chafa
 chafa-devel
 chafa-doc
-chafa-libs
 chafa-static
 chan
 chan
@@ -8208,7 +8280,6 @@ ddccontrol-devel
 ddccontrol-doc.noarch
 ddccontrol-gtk
 ddclient.noarch
-ddcutil
 ddd
 ddgr.noarch
 ddiskit.noarch
@@ -8529,7 +8600,6 @@ distgen.noarch
 distribution-gpg-keys-copr.noarch
 distro-info
 distro-info-data.noarch
-distrobox.noarch
 ditaa.noarch
 djview4
 djview4-plugin
@@ -10091,7 +10161,6 @@ fastbit-devel
 fastbit-devel
 fastd
 fasterxml-oss-parent.noarch
-fastfetch
 fastfetch-bash-completion.noarch
 fastfetch-fish-completion.noarch
 fastfetch-zsh-completion.noarch
@@ -10640,7 +10709,6 @@ flam3
 flam3
 flam3-devel
 flam3-devel
-flamegraph.noarch
 flamegraph-demos.noarch
 flamegraph-stackcollapse.noarch
 flamegraph-stackcollapse-perf.noarch
@@ -11039,7 +11107,6 @@ freeipa-server
 freeipa-server-common.noarch
 freeipa-server-dns.noarch
 freeipa-server-trust-ad
-freeipmi
 freeipmi
 freeipmi-bmc-watchdog
 freeipmi-devel
@@ -18046,6 +18113,7 @@ gnome-nettool
 gnome-network-displays
 gnome-nibbles
 gnome-online-accounts
+gnome-online-accounts
 gnome-online-accounts-devel
 gnome-online-accounts-devel
 gnome-online-accounts-gtk
@@ -20749,7 +20817,6 @@ gpm
 gpm-devel
 gpm-devel
 gpm-libs
-gpm-libs
 gpm-static
 gpm-static
 gpodder.noarch
@@ -20860,7 +20927,6 @@ graphlcd-common
 graphlcd-devel
 graphlcd-devel
 graphlcd-tools
-graphviz
 graphviz
 graphviz-R
 graphviz-devel
@@ -21314,7 +21380,6 @@ gtkwave
 gtorrentviewer
 gtranslator
 gts
-gts
 gts-devel
 gts-devel
 gtts.noarch
@@ -21434,7 +21499,6 @@ guvcview-devel
 guvcview-devel
 guvcview-libs
 guvcview-libs
-gv
 gvfs
 gvfs-client
 gvfs-fuse
@@ -21550,7 +21614,6 @@ hcloud
 hcxtools
 hd-idle
 hddfancontrol.noarch
-hddtemp
 hdf
 hdf
 hdf-devel
@@ -22117,7 +22180,6 @@ hyprlock
 hyprpaper
 hyprutils-devel
 hyprwayland-scanner-devel
-i2c-tools
 i2c-tools-perl
 i3-config-fedora.noarch
 i3-devel
@@ -22561,7 +22623,6 @@ intel-vpl-gpu-rt-devel
 intelhex.noarch
 intelhex-docs.noarch
 intltool.noarch
-inxi.noarch
 ioc-writer.noarch
 iodine
 iodine-client
@@ -22596,7 +22657,6 @@ iperf3-devel
 ipgetter2.noarch
 ipmctl
 ipmievd
-ipmitool
 iproute-devel
 iproute-devel
 iproute-doc
@@ -25848,7 +25908,6 @@ lash-devel
 lash-libs
 lash-libs
 lasi
-lasi
 lasi-devel
 lasi-devel
 lasi-doc.noarch
@@ -26189,7 +26248,6 @@ libXvMC
 libXvMC
 libXvMC-devel
 libXvMC-devel
-libXxf86dga
 libXxf86dga
 libXxf86dga-devel
 libXxf86dga-devel
@@ -27921,7 +27979,6 @@ libhubbub-devel
 libhubbub-doc.noarch
 libhwasan
 libhwasan-static
-libi2c
 libi2c
 libi2c-devel
 libi2c-devel
@@ -30448,7 +30505,6 @@ libusbmuxd-devel
 libusbmuxd-devel
 libusbmuxd-utils
 libuser
-libuser
 libuser-devel
 libuser-devel
 libutempter
@@ -31253,7 +31309,6 @@ llvm18-static
 llvm18-static
 llvm18-test
 llvm18-test
-lm_sensors
 lm_sensors-devel
 lm_sensors-devel
 lm_sensors-sensord
@@ -31389,9 +31444,7 @@ ls-qpack
 ls-qpack
 ls-qpack-devel
 ls-qpack-devel
-lsb_release.noarch
 lscolors
-lsd
 lsdvd
 lsfrom
 lshw
@@ -34903,7 +34956,6 @@ netopeer2-cli
 netopeer2-server
 netpanzer
 netpbm
-netpbm
 netpbm-devel
 netpbm-devel
 netpbm-doc
@@ -37945,7 +37997,6 @@ perl-Class-Whitehole.noarch
 perl-Class-XSAccessor
 perl-Class-XSAccessor-tests
 perl-Clipboard.noarch
-perl-Clone
 perl-Clone-Choose.noarch
 perl-Clone-PP.noarch
 perl-Clownfish
@@ -37969,10 +38020,8 @@ perl-CommonMark
 perl-Compress-Bzip2
 perl-Compress-Bzip2-tests.noarch
 perl-Compress-LZF
-perl-Compress-Raw-Bzip2
 perl-Compress-Raw-Bzip2-tests
 perl-Compress-Raw-Lzma
-perl-Compress-Raw-Zlib
 perl-Compress-Raw-Zlib-tests
 perl-Compress-Stream-Zstd
 perl-Config-Any.noarch
@@ -38040,7 +38089,6 @@ perl-Coro
 perl-Coro-Multicore
 perl-Coro-Multicore-tests.noarch
 perl-Coro-tests.noarch
-perl-Cpanel-JSON-XS
 perl-Crypt-Argon2
 perl-Crypt-Blowfish
 perl-Crypt-Blowfish_PP.noarch
@@ -38187,7 +38235,6 @@ perl-Data-Constraint.noarch
 perl-Data-Denter.noarch
 perl-Data-Dmp.noarch
 perl-Data-Dmp-tests.noarch
-perl-Data-Dump.noarch
 perl-Data-Dump-Color.noarch
 perl-Data-Dump-Streamer
 perl-Data-Dumper-Concise.noarch
@@ -38410,7 +38457,6 @@ perl-Device-SerialPort
 perl-Diff-LibXDiff
 perl-Digest-BubbleBabble.noarch
 perl-Digest-CRC
-perl-Digest-HMAC.noarch
 perl-Digest-HMAC-tests.noarch
 perl-Digest-JHash
 perl-Digest-MD2
@@ -38419,7 +38465,6 @@ perl-Digest-MD5-File.noarch
 perl-Digest-MD5-tests
 perl-Digest-Nilsimsa
 perl-Digest-Perl-MD5.noarch
-perl-Digest-SHA
 perl-Digest-SHA-tests
 perl-Digest-SHA1
 perl-Digest-SHA1-tests
@@ -38513,7 +38558,6 @@ perl-Encode-ISO2022
 perl-Encode-JIS2K
 perl-Encode-JISX0213
 perl-Encode-JP-Mobile
-perl-Encode-Locale.noarch
 perl-Encode-Locale-tests.noarch
 perl-Encode-Newlines.noarch
 perl-Encode-devel
@@ -38617,7 +38661,6 @@ perl-File-CheckTree-tests.noarch
 perl-File-Comments.noarch
 perl-File-Compare.noarch
 perl-File-ConfigDir.noarch
-perl-File-Copy.noarch
 perl-File-Copy-Recursive.noarch
 perl-File-Copy-Recursive-Reduced.noarch
 perl-File-DesktopEntry.noarch
@@ -38648,7 +38691,6 @@ perl-File-Inplace.noarch
 perl-File-KDBX.noarch
 perl-File-KeePass.noarch
 perl-File-LibMagic
-perl-File-Listing.noarch
 perl-File-Listing-tests.noarch
 perl-File-LoadLines.noarch
 perl-File-MMagic.noarch
@@ -38678,7 +38720,6 @@ perl-File-ShareDir-PAR.noarch
 perl-File-ShareDir-ProjectDistDir.noarch
 perl-File-Slurp.noarch
 perl-File-Slurp-Tiny.noarch
-perl-File-Slurper.noarch
 perl-File-Slurper-tests.noarch
 perl-File-Spec-Native.noarch
 perl-File-Sync
@@ -38889,7 +38930,6 @@ perl-HTML-LinkList.noarch
 perl-HTML-Lint.noarch
 perl-HTML-Mason.noarch
 perl-HTML-Mason-PSGIHandler.noarch
-perl-HTML-Parser
 perl-HTML-Parser-tests
 perl-HTML-PrettyPrinter.noarch
 perl-HTML-Quoted.noarch
@@ -38905,7 +38945,6 @@ perl-HTML-SuperForm.noarch
 perl-HTML-Table.noarch
 perl-HTML-TableExtract.noarch
 perl-HTML-TagCloud.noarch
-perl-HTML-Tagset.noarch
 perl-HTML-Tagset-tests.noarch
 perl-HTML-Template.noarch
 perl-HTML-Template-Expr.noarch
@@ -38924,13 +38963,11 @@ perl-HTTP-BrowserDetect.noarch
 perl-HTTP-Cache-Transparent.noarch
 perl-HTTP-CookieJar.noarch
 perl-HTTP-CookieMonster.noarch
-perl-HTTP-Cookies.noarch
 perl-HTTP-Cookies-tests.noarch
 perl-HTTP-DAV.noarch
 perl-HTTP-Daemon.noarch
 perl-HTTP-Daemon-SSL.noarch
 perl-HTTP-Daemon-tests.noarch
-perl-HTTP-Date.noarch
 perl-HTTP-Date-tests.noarch
 perl-HTTP-Easy.noarch
 perl-HTTP-Entity-Parser.noarch
@@ -38939,10 +38976,8 @@ perl-HTTP-Headers-ActionPack.noarch
 perl-HTTP-Headers-Fast.noarch
 perl-HTTP-Link-Parser.noarch
 perl-HTTP-Lite.noarch
-perl-HTTP-Message.noarch
 perl-HTTP-Message-tests.noarch
 perl-HTTP-MultiPartParser.noarch
-perl-HTTP-Negotiate.noarch
 perl-HTTP-Negotiate-tests.noarch
 perl-HTTP-OAI.noarch
 perl-HTTP-OAI-tests.noarch
@@ -39001,7 +39036,6 @@ perl-Hijk.noarch
 perl-Hook-LexWrap.noarch
 perl-I18N-Collate.noarch
 perl-I18N-LangTags.noarch
-perl-I18N-Langinfo
 perl-IO-AIO
 perl-IO-All.noarch
 perl-IO-Any.noarch
@@ -39011,8 +39045,6 @@ perl-IO-Async-SSL.noarch
 perl-IO-Capture.noarch
 perl-IO-Capture-Extended.noarch
 perl-IO-CaptureOutput.noarch
-perl-IO-Compress.noarch
-perl-IO-Compress-Brotli
 perl-IO-Compress-Brotli-tests.noarch
 perl-IO-Compress-Lzma.noarch
 perl-IO-Compress-Zstd.noarch
@@ -39020,7 +39052,6 @@ perl-IO-Compress-tests.noarch
 perl-IO-Digest.noarch
 perl-IO-Event.noarch
 perl-IO-FDPass
-perl-IO-HTML.noarch
 perl-IO-HTML-tests.noarch
 perl-IO-Handle-Util.noarch
 perl-IO-InSitu.noarch
@@ -39164,7 +39195,6 @@ perl-LWP-Authen-Negotiate.noarch
 perl-LWP-Authen-Wsse.noarch
 perl-LWP-ConsoleLogger.noarch
 perl-LWP-ConsoleLogger-tests.noarch
-perl-LWP-MediaTypes.noarch
 perl-LWP-MediaTypes-tests.noarch
 perl-LWP-Online.noarch
 perl-LWP-Protocol-PSGI.noarch
@@ -39367,7 +39397,6 @@ perl-Math-Base-Convert.noarch
 perl-Math-Base36.noarch
 perl-Math-Base85.noarch
 perl-Math-BaseCnv.noarch
-perl-Math-BigInt.noarch
 perl-Math-BigInt-FastCalc
 perl-Math-BigInt-FastCalc-tests
 perl-Math-BigInt-GMP
@@ -39375,7 +39404,6 @@ perl-Math-BigInt-GMP-tests
 perl-Math-BigInt-tests.noarch
 perl-Math-Calc-Units.noarch
 perl-Math-Cartesian-Product.noarch
-perl-Math-Complex.noarch
 perl-Math-ConvexHull.noarch
 perl-Math-ConvexHull-MonotoneChain
 perl-Math-Derivative.noarch
@@ -39494,7 +39522,6 @@ perl-Module-Install-TestTarget.noarch
 perl-Module-Install-TrustMetaYml.noarch
 perl-Module-Install-XSUtil.noarch
 perl-Module-Install-tests.noarch
-perl-Module-Load.noarch
 perl-Module-Load-Conditional.noarch
 perl-Module-Load-Conditional-tests.noarch
 perl-Module-Load-Util.noarch
@@ -39686,7 +39713,6 @@ perl-NEXT.noarch
 perl-NKF
 perl-NNTPClient.noarch
 perl-NNTPClient-tests.noarch
-perl-NTLM.noarch
 perl-Nagios-NSCA.noarch
 perl-Nagios-Plugin-WWW-Mechanize.noarch
 perl-Net.noarch
@@ -39735,7 +39761,6 @@ perl-Net-FTPSSL.noarch
 perl-Net-FTPServer.noarch
 perl-Net-Facebook-Oauth2.noarch
 perl-Net-GPSD.noarch
-perl-Net-HTTP.noarch
 perl-Net-HTTP-tests.noarch
 perl-Net-IDN-Encode
 perl-Net-IDN-Nameprep.noarch
@@ -40056,7 +40081,6 @@ perl-PerlIO-eol
 perl-PerlIO-eol-tests.noarch
 perl-PerlIO-gzip
 perl-PerlIO-locale
-perl-PerlIO-utf8_strict
 perl-PerlIO-via-QuotedPrint.noarch
 perl-PerlIO-via-QuotedPrint-tests.noarch
 perl-PerlIO-via-Timeout.noarch
@@ -40428,7 +40452,6 @@ perl-Syntax-Operator-In-tests.noarch
 perl-Sys-CPU
 perl-Sys-Detect-Virtualization
 perl-Sys-Guestfs
-perl-Sys-Hostname
 perl-Sys-Hostname-Long.noarch
 perl-Sys-Info-Base.noarch
 perl-Sys-MemInfo
@@ -40906,7 +40929,6 @@ perl-Time-Warp
 perl-Time-Warp-tests
 perl-Time-timegm
 perl-Time-y2038
-perl-TimeDate.noarch
 perl-TimeDate-tests.noarch
 perl-Titanium.noarch
 perl-Tk
@@ -40940,7 +40962,6 @@ perl-Tree-Simple.noarch
 perl-Tree-Simple-VisitorFactory.noarch
 perl-Tree-XPathEngine.noarch
 perl-Tree-tests.noarch
-perl-Try-Tiny.noarch
 perl-TryCatch
 perl-Type-Tiny.noarch
 perl-Type-Tiny-XS
@@ -41030,7 +41051,6 @@ perl-WWW-Mechanize-GZip.noarch
 perl-WWW-Mechanize-TreeBuilder.noarch
 perl-WWW-OrangeHRM-Client.noarch
 perl-WWW-Pastebin-PastebinCom-Create.noarch
-perl-WWW-RobotRules.noarch
 perl-WWW-RobotRules-tests.noarch
 perl-WWW-Salesforce.noarch
 perl-WWW-Search.noarch
@@ -41078,7 +41098,6 @@ perl-XML-DOM-XPath.noarch
 perl-XML-DTDParser.noarch
 perl-XML-DifferenceMarkup
 perl-XML-DifferenceMarkup-tests.noarch
-perl-XML-Dumper.noarch
 perl-XML-Entities.noarch
 perl-XML-Fast
 perl-XML-Fast-tests.noarch
@@ -41109,7 +41128,6 @@ perl-XML-NamespaceFactory.noarch
 perl-XML-NamespaceFactory-tests.noarch
 perl-XML-NamespaceSupport.noarch
 perl-XML-NamespaceSupport-tests.noarch
-perl-XML-Parser
 perl-XML-Parser-Lite.noarch
 perl-XML-Parser-Lite-Tree.noarch
 perl-XML-Parser-tests
@@ -41252,7 +41270,6 @@ perl-libnodeupdown
 perl-libs
 perl-libwhisker2.noarch
 perl-libwhisker2-doc.noarch
-perl-libwww-perl.noarch
 perl-libwww-perl-tests.noarch
 perl-libxml-perl.noarch
 perl-libxml-perl-tests.noarch
@@ -41302,7 +41319,6 @@ perl-smartmatch
 perl-solv
 perl-sort.noarch
 perl-strictures.noarch
-perl-subs.noarch
 perl-sword
 perl-syntax.noarch
 perl-tests
@@ -42683,7 +42699,6 @@ pplite-tools
 ppp
 ppp-devel
 ppp-devel
-pprof.noarch
 pps-tools
 pps-tools-devel
 pps-tools-devel
@@ -44208,6 +44223,7 @@ python3-circuitbreaker.noarch
 python3-ciso8601
 python3-citeproc-py.noarch
 python3-cjdns.noarch
+python3-ckzg
 python3-clang
 python3-claripy.noarch
 python3-cleo.noarch
@@ -44293,7 +44309,6 @@ python3-collada.noarch
 python3-collectd_cvmfs.noarch
 python3-collectd_puppet.noarch
 python3-collectd_systemd.noarch
-python3-colorama.noarch
 python3-colorclass.noarch
 python3-colored.noarch
 python3-colored-traceback.noarch
@@ -47144,7 +47159,6 @@ python3-shodan.noarch
 python3-shortuuid.noarch
 python3-should_dsl.noarch
 python3-show-in-file-manager.noarch
-python3-shtab.noarch
 python3-sieve.noarch
 python3-sievelib.noarch
 python3-signedjson.noarch
@@ -47469,7 +47483,6 @@ python3-templated-dictionary.noarch
 python3-tempora.noarch
 python3-tensile.noarch
 python3-term-background.noarch
-python3-termcolor.noarch
 python3-terminado.noarch
 python3-terminaltables.noarch
 python3-teslajsonpy.noarch
@@ -67259,7 +67272,6 @@ sqlcipher-devel
 sqlcipher-devel
 sqlgrey.noarch
 sqlite
-sqlite
 sqlite-analyzer
 sqlite-debug
 sqlite-devel
@@ -75328,7 +75340,6 @@ tkrzw-doc.noarch
 tkrzw-libs
 tkrzw-libs
 tktray
-tldr.noarch
 tlf
 tllist-devel
 tllist-devel
@@ -76090,7 +76101,6 @@ usbview
 usd
 usd-devel
 usd-libs
-usermode
 usermode-gtk
 userspace-rcu
 userspace-rcu-devel
@@ -76510,12 +76520,9 @@ vim-ale.noarch
 vim-ansible.noarch
 vim-command-t
 vim-commentary.noarch
-vim-common
 vim-ctrlp.noarch
 vim-default-editor.noarch
 vim-devicons.noarch
-vim-enhanced
-vim-filesystem.noarch
 vim-fugitive.noarch
 vim-fugitive-gitlab.noarch
 vim-fugitive-pagure.noarch
@@ -77185,7 +77192,6 @@ wmCalClock
 wmacpi
 wmapmload
 wmbusmeters
-wmctrl
 wmdocker
 wmfrog
 wmname
@@ -77475,7 +77481,6 @@ xdialog
 xdms
 xdotool
 xdp-tools
-xdpyinfo
 xdrawchem
 xe-guest-utilities-latest
 xed
@@ -77916,7 +77921,6 @@ xqilla-devel
 xqilla-devel
 xqilla-doc.noarch
 xr-hardware.noarch
-xrandr
 xrdcl-http
 xrdp
 xrdp
@@ -78069,7 +78073,6 @@ xwm
 xwrits
 xwud
 xwxapt
-xxd
 xxhash
 xxhash-devel
 xxhash-devel
@@ -78222,7 +78225,6 @@ yubikey-personalization-gui
 yubikey-val.noarch
 yubikey-val-munin.noarch
 yum.noarch
-yyjson
 yyjson
 yyjson-devel
 yyjson-devel
