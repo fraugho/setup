@@ -17,3 +17,11 @@ eza - better ls
 xev - keyboard event
 
 evtest - keyboard event
+
+perf - performance
+
+pprof - performance
+
+tldr - man but shorter
+
+flamegraph - perf visualizer
