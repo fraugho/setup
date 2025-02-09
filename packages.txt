@@ -81,6 +81,7 @@ anaconda-install-env-deps
 anaconda-live.noarch
 anaconda-tui
 anaconda-widgets
+android-tools
 annobin-docs.noarch
 annobin-plugin-gcc
 ansible-srpm-macros.noarch
@@ -1083,6 +1084,7 @@ libfdt
 libffado
 libffi
 libffi
+libffi-devel
 libfido2
 libfontenc
 libfprint
@@ -1142,6 +1144,7 @@ libimobiledevice
 libimobiledevice-glue
 libini_config
 libinput
+libinput-devel
 libipt
 libiptcdata
 libiscsi
@@ -1652,6 +1655,7 @@ p11-kit
 p11-kit
 p11-kit-server
 p11-kit-trust
+p7zip
 package-notes-srpm-macros.noarch
 paktype-naskh-basic-fonts.noarch
 pam
@@ -2049,6 +2053,8 @@ qt5-qtbase
 qt5-qtbase-common.noarch
 qt5-qtbase-gui
 qt5-qtdeclarative
+qt5-qtgraphicaleffects
+qt5-qtquickcontrols2
 qt5-qtsvg
 qt5-qttranslations.noarch
 qt5-qtwayland
@@ -2079,6 +2085,7 @@ rit-meera-new-fonts.noarch
 rit-rachana-fonts.noarch
 rootfiles.noarch
 rpcbind
+rpi-imager
 rpm
 rpm-build
 rpm-build-libs
@@ -2199,6 +2206,7 @@ system-config-printer-libs.noarch
 system-config-printer-udev
 systemd
 systemd-container
+systemd-devel
 systemd-libs
 systemd-libs
 systemd-networkd
@@ -2223,6 +2231,7 @@ time
 tini-static
 tiwilink-firmware.noarch
 tldr.noarch
+tlp.noarch
 tmux
 tomlplusplus
 toolbox
@@ -2302,6 +2311,7 @@ vulkan-loader
 vulkan-tools
 wavpack
 waybar
+wayland-devel
 webkit2gtk4.1
 webkitgtk6.0
 webp-pixbuf-loader
@@ -3760,8 +3770,10 @@ accounts-qml-module-qt5
 accounts-qml-module-qt5
 accounts-qml-module-qt6
 accountsservice
+accountsservice
 accountsservice-devel
 accountsservice-devel
+accountsservice-libs
 accountsservice-libs
 aces_container
 aces_container
@@ -4207,7 +4219,6 @@ ancient-devel
 ancient-libs
 ancient-libs
 android-file-transfer
-android-tools
 anet
 anet
 anet-devel
@@ -5200,6 +5211,8 @@ avr-libc.noarch
 avr-libc-doc.noarch
 avra
 avrdude
+aw-server-rust
+aw-sync-rust
 awesfx
 awesome
 awesome-doc.noarch
@@ -5692,6 +5705,10 @@ blivet-gui.noarch
 blktrace
 bloaty
 blobwars
+blogc
+blogc-git-receiver
+blogc-make
+blogc-runserver
 blogilo
 blogilo-libs
 blogilo-libs
@@ -5725,6 +5742,7 @@ bluedevil
 bluedevil
 bluefish
 bluefish-shared-data.noarch
+bluejay
 blueman-caja.noarch
 blueman-nemo.noarch
 blueprint-compiler.noarch
@@ -5987,9 +6005,11 @@ bristol
 bristol-devel
 bristol-devel
 brlapi
+brlapi
 brlapi-devel
 brlapi-devel
 brlapi-java
+brltty
 brltty-at-spi2
 brltty-docs.noarch
 brltty-dracut
@@ -6349,6 +6369,7 @@ capypdf-devel
 carat
 carat-doc.noarch
 carat-tables.noarch
+cargo
 cargo-c
 cargo-deny
 cargo-insta
@@ -6755,10 +6776,13 @@ clamtk.noarch
 clamz
 clanbomber
 clang
+clang
 clang-analyzer.noarch
 clang-devel
 clang-devel
 clang-libs
+clang-libs
+clang-resource-filesystem
 clang-resource-filesystem
 clang-tidy-sarif
 clang-tools-extra
@@ -7100,11 +7124,12 @@ cocoalib-doc.noarch
 cocot
 code.armv7hl
 code.aarch64
+code
 code-exploration.aarch64
 code-exploration.armv7hl
 code-exploration
-code-insiders.aarch64
 code-insiders.armv7hl
+code-insiders.aarch64
 code-insiders
 code2html.noarch
 codeblocks
@@ -7505,6 +7530,7 @@ compface
 compface
 compface-devel
 compface-devel
+compiler-rt
 compiler-rt
 compiler-rt17
 compiz
@@ -10116,6 +10142,8 @@ fail2ban-tests.noarch
 fakechroot
 fakechroot-libs
 fakechroot-libs
+fakeroot
+fakeroot-libs
 fakeroot-libs
 faketpm.noarch
 faketpm-selinux.noarch
@@ -10683,6 +10711,8 @@ firebird-emu
 firebird-examples.noarch
 firebird-utils
 firecracker
+firefox
+firefox-langpacks
 firejail
 firewalk
 firewall-applet.noarch
@@ -18054,6 +18084,7 @@ gnome-chemistry-utils
 gnome-chemistry-utils-gnumeric
 gnome-chemistry-utils-libs
 gnome-chess
+gnome-classic-session.noarch
 gnome-classic-session-xsession.noarch
 gnome-colors-icon-theme.noarch
 gnome-commander
@@ -18146,11 +18177,14 @@ gnome-settings-daemon-devel
 gnome-sharp
 gnome-sharp-devel
 gnome-sharp-devel
+gnome-shell
+gnome-shell-extension-apps-menu.noarch
 gnome-shell-extension-argos.noarch
 gnome-shell-extension-auto-move-windows.noarch
 gnome-shell-extension-blur-my-shell.noarch
 gnome-shell-extension-bubblemail.noarch
 gnome-shell-extension-caffeine.noarch
+gnome-shell-extension-common.noarch
 gnome-shell-extension-dash-to-dock.noarch
 gnome-shell-extension-dash-to-panel.noarch
 gnome-shell-extension-disconnect-wifi.noarch
@@ -18167,12 +18201,14 @@ gnome-shell-extension-gpaste.noarch
 gnome-shell-extension-gsconnect
 gnome-shell-extension-ibus-font.noarch
 gnome-shell-extension-just-perfection.noarch
+gnome-shell-extension-launch-new-instance.noarch
 gnome-shell-extension-light-style.noarch
 gnome-shell-extension-native-window-placement.noarch
 gnome-shell-extension-netspeed.noarch
 gnome-shell-extension-no-overview.noarch
 gnome-shell-extension-openweather.noarch
 gnome-shell-extension-pidgin.noarch
+gnome-shell-extension-places-menu.noarch
 gnome-shell-extension-pop-shell.noarch
 gnome-shell-extension-pop-shell-shortcut-overrides.noarch
 gnome-shell-extension-refresh-wifi.noarch
@@ -18185,6 +18221,7 @@ gnome-shell-extension-system-monitor-applet.noarch
 gnome-shell-extension-unite.noarch
 gnome-shell-extension-user-theme.noarch
 gnome-shell-extension-vertical-workspaces.noarch
+gnome-shell-extension-window-list.noarch
 gnome-shell-extension-windowsNavigator.noarch
 gnome-shell-extension-workspace-indicator.noarch
 gnome-shell-theme-flat-remix.noarch
@@ -18325,11 +18362,13 @@ goffice
 goffice-devel
 gogextract.noarch
 gojq
+golang
 golang-aead-minisign
 golang-aead-minisign-devel.noarch
 golang-ariga-atlas
 golang-ariga-atlas-devel.noarch
 golang-bazil-fuse-devel.noarch
+golang-bin
 golang-bitbucket-creachadair-shell-devel.noarch
 golang-bitbucket-ww-goautoneg-devel.noarch
 golang-bug-serial-1
@@ -20328,6 +20367,7 @@ golang-sr-emersion-scfg-devel.noarch
 golang-sr-nelsam-hel-devel.noarch
 golang-sr-sircmpwn-getopt-devel.noarch
 golang-sr-spc-log-devel.noarch
+golang-src.noarch
 golang-starlark
 golang-starlark-devel.noarch
 golang-storj-drpc
@@ -22056,6 +22096,7 @@ hunspell-zu.noarch
 hunt
 hut
 hw-probe.noarch
+hwdata.noarch
 hwdata-devel.noarch
 hwinfo
 hwinfo-devel
@@ -26169,7 +26210,13 @@ libRmath-static
 libSM
 libSM-devel
 libSM-devel
+libX11
+libX11
+libX11-common.noarch
 libX11-devel
+libX11-devel
+libX11-xcb
+libX11-xcb
 libXISF
 libXISF
 libXISF-devel
@@ -27434,7 +27481,6 @@ libffado
 libffado-devel
 libffado-devel
 libffi-devel
-libffi-devel
 libfido2
 libfido2-devel
 libfido2-devel
@@ -28109,7 +28155,6 @@ libinjection-devel
 libinjection-devel
 libinjection-tests
 libinput
-libinput-devel
 libinput-devel
 libinput-test
 libinput-utils
@@ -28817,6 +28862,7 @@ libnauty
 libnauty-devel
 libnauty-devel
 libnbd
+libnbd
 libnbd-bash-completion.noarch
 libnbd-devel
 libnbd-devel
@@ -28891,6 +28937,7 @@ libnfs
 libnfs-devel
 libnfs-devel
 libnfs-utils
+libnfsidmap
 libnfsidmap
 libnfsidmap-devel
 libnfsidmap-devel
@@ -29061,6 +29108,8 @@ libomemo-c-devel
 libomemo-devel
 libomemo-devel
 libomp
+libomp
+libomp-devel
 libomp-devel
 libomp17
 libomp17-devel
@@ -29338,6 +29387,7 @@ libportal-qt6-devel
 libpostproc-free
 libpostproc-free-devel
 libpostproc-free-devel
+libppd
 libppd
 libppd-devel
 libppd-devel
@@ -30487,6 +30537,8 @@ libusb-compat-0.1
 libusb-compat-0.1-devel
 libusb-compat-0.1-devel
 libusb-compat-0.1-tests-examples
+libusb1
+libusb1
 libusb1-devel
 libusb1-devel
 libusb1-devel-doc.noarch
@@ -31057,6 +31109,7 @@ lilv
 lilv-devel
 lilv-devel
 lilv-libs
+lilv-libs
 lilypond
 lilypond-doc.noarch
 lilypond-emmentaler-fonts.noarch
@@ -31225,6 +31278,8 @@ llvm-devel
 llvm-doc.noarch
 llvm-googletest
 llvm-googletest
+llvm-libs
+llvm-libs
 llvm-libunwind
 llvm-libunwind
 llvm-libunwind-devel
@@ -34372,6 +34427,7 @@ mujs-devel
 mujs-static
 mujs-static
 mullvad-browser
+mullvad-vpn
 multi-git-status.noarch
 multicat
 multicharge
@@ -34438,6 +34494,8 @@ mussh.noarch
 mustache-devel.noarch
 mutt
 mutter
+mutter
+mutter-common.noarch
 mutter-devel
 mutter-devel
 mutter-tests
@@ -34707,12 +34765,16 @@ nazghul
 nbc
 nbd
 nbdfuse
+nbdkit
 nbdkit-S3-plugin
 nbdkit-bash-completion.noarch
+nbdkit-basic-filters
+nbdkit-basic-plugins
 nbdkit-blkio-plugin
 nbdkit-bzip2-filter
 nbdkit-cc-plugin
 nbdkit-cdi-plugin
+nbdkit-curl-plugin
 nbdkit-devel
 nbdkit-devel
 nbdkit-example-plugins
@@ -34728,8 +34790,11 @@ nbdkit-ocaml-plugin
 nbdkit-ocaml-plugin-devel
 nbdkit-perl-plugin
 nbdkit-python-plugin
+nbdkit-selinux.noarch
+nbdkit-server
 nbdkit-server
 nbdkit-srpm-macros.noarch
+nbdkit-ssh-plugin
 nbdkit-stats-filter
 nbdkit-tar-filter
 nbdkit-tcl-plugin
@@ -34843,6 +34908,7 @@ neon
 neon-backgrounds.noarch
 neon-devel
 neon-devel
+neovim
 neovim-ale.noarch
 neovim-qt
 nes_ntsc
@@ -35066,6 +35132,7 @@ nfs-ganesha-selinux.noarch
 nfs-ganesha-utils
 nfs-ganesha-vfs
 nfs-stats-utils
+nfs-utils
 nfs-utils-coreos
 nfs4-acl-tools
 nfsometer.noarch
@@ -35689,6 +35756,8 @@ ocaml-lwt-ppx
 ocaml-lwt-ppx-devel
 ocaml-lwt-react
 ocaml-lwt-react-devel
+ocaml-lwt-retry
+ocaml-lwt-retry-devel
 ocaml-markup
 ocaml-markup-devel
 ocaml-markup-lwt
@@ -36864,6 +36933,7 @@ osh-hub.noarch
 osh-hub-conf-devel.noarch
 osh-worker.noarch
 osh-worker-conf-devel.noarch
+osh-worker-manager.noarch
 osm-gps-map
 osm-gps-map
 osm-gps-map-devel
@@ -36955,7 +37025,6 @@ p11-kit-devel
 p11-kit-trust
 p11-remote
 p54pci-firmware.noarch
-p7zip
 p7zip-doc.noarch
 p7zip-gui
 p7zip-plugins
@@ -43105,6 +43174,7 @@ pypolicyd-spf.noarch
 pypolicyd-spf-milter.noarch
 pyppd.noarch
 pyproject-rpm-macros.noarch
+pyproject-srpm-macros.noarch
 pypy
 pypy-devel
 pypy-libs
@@ -43582,6 +43652,7 @@ python-typecode-doc.noarch
 python-ufl-demo.noarch
 python-ufl-test.noarch
 python-universal-pathlib-doc.noarch
+python-unversioned-command.noarch
 python-upnpy-doc.noarch
 python-uranium-doc.noarch
 python-uritools-doc.noarch
@@ -43608,6 +43679,7 @@ python-zarr-doc.noarch
 python-zope-event-doc.noarch
 python-zope-interface-doc.noarch
 python-zope-testrunner-doc.noarch
+python3
 python3
 python3-APLpy.noarch
 python3-APScheduler.noarch
@@ -44018,6 +44090,7 @@ python3-azure-synapse-artifacts.noarch
 python3-azure-synapse-managedprivateendpoints.noarch
 python3-azure-synapse-spark.noarch
 python3-b2sdk.noarch
+python3-babel.noarch
 python3-babelfish.noarch
 python3-babeltrace
 python3-backcall.noarch
@@ -44118,6 +44191,7 @@ python3-bravado-core.noarch
 python3-breathe.noarch
 python3-brial
 python3-brian2
+python3-brlapi
 python3-brotli
 python3-brukerapi.noarch
 python3-bsddb3
@@ -44388,6 +44462,7 @@ python3-cro.noarch
 python3-crochet.noarch
 python3-croniter.noarch
 python3-crossword.noarch
+python3-cryptography
 python3-cs.noarch
 python3-cs+async.noarch
 python3-cs+highlight.noarch
@@ -44717,6 +44792,7 @@ python3-etcd.noarch
 python3-etcd3.noarch
 python3-etcd3gw.noarch
 python3-eth-abi.noarch
+python3-eth-account.noarch
 python3-eth-hash.noarch
 python3-eth-keyfile.noarch
 python3-eth-keys.noarch
@@ -45526,6 +45602,7 @@ python3-librealsense
 python3-librealsense-devel
 python3-librealsense-devel
 python3-librepo
+python3-libs
 python3-libs
 python3-libsass
 python3-libsbml
@@ -47647,6 +47724,7 @@ python3-uhashring.noarch
 python3-uinput
 python3-ujson
 python3-ukkonen
+python3-unbound
 python3-unicodedata2
 python3-unicorn
 python3-unicorn
@@ -47995,6 +48073,7 @@ qaccessibilityclient-qt6
 qaccessibilityclient-qt6
 qaccessibilityclient-qt6-devel
 qaccessibilityclient-qt6-devel
+qadwaitadecorations-qt5
 qadwaitadecorations-qt5
 qadwaitadecorations-qt6
 qadwaitadecorations-qt6
@@ -48526,7 +48605,6 @@ qt5-qtgamepad-devel
 qt5-qtgamepad-doc.noarch
 qt5-qtgamepad-examples
 qt5-qtgraphicaleffects
-qt5-qtgraphicaleffects
 qt5-qtgraphicaleffects-doc.noarch
 qt5-qtimageformats
 qt5-qtimageformats
@@ -48555,7 +48633,6 @@ qt5-qtquickcontrols
 qt5-qtquickcontrols
 qt5-qtquickcontrols-doc.noarch
 qt5-qtquickcontrols-examples
-qt5-qtquickcontrols2
 qt5-qtquickcontrols2
 qt5-qtquickcontrols2-devel
 qt5-qtquickcontrols2-devel
@@ -48692,6 +48769,7 @@ qt6-doc.noarch
 qt6-doc-devel.noarch
 qt6-doc-html.noarch
 qt6-doctools
+qt6-filesystem
 qt6-linguist
 qt6-qdbusviewer
 qt6-qt3d
@@ -48705,9 +48783,12 @@ qt6-qt5compat-devel
 qt6-qt5compat-devel
 qt6-qt5compat-examples
 qt6-qtbase
+qt6-qtbase
+qt6-qtbase-common.noarch
 qt6-qtbase-devel
 qt6-qtbase-devel
 qt6-qtbase-examples
+qt6-qtbase-gui
 qt6-qtbase-gui
 qt6-qtbase-ibase
 qt6-qtbase-ibase
@@ -48741,6 +48822,7 @@ qt6-qtdatavis3d
 qt6-qtdatavis3d-devel
 qt6-qtdatavis3d-devel
 qt6-qtdatavis3d-examples
+qt6-qtdeclarative
 qt6-qtdeclarative
 qt6-qtdeclarative-devel
 qt6-qtdeclarative-devel
@@ -48858,6 +48940,7 @@ qt6-qtspeech-flite
 qt6-qtspeech-speechd
 qt6-qtspeech-speechd
 qt6-qtsvg
+qt6-qtsvg
 qt6-qtsvg-devel
 qt6-qtsvg-devel
 qt6-qtsvg-examples
@@ -48875,11 +48958,13 @@ qt6-qttools-libs-help
 qt6-qttools-libs-help
 qt6-qttools-static
 qt6-qttools-static
+qt6-qttranslations.noarch
 qt6-qtvirtualkeyboard
 qt6-qtvirtualkeyboard
 qt6-qtvirtualkeyboard-devel
 qt6-qtvirtualkeyboard-devel
 qt6-qtvirtualkeyboard-examples
+qt6-qtwayland
 qt6-qtwayland
 qt6-qtwayland-devel
 qt6-qtwayland-devel
@@ -48902,6 +48987,7 @@ qt6-qtwebview
 qt6-qtwebview-devel
 qt6-qtwebview-examples
 qt6-rpm-macros.noarch
+qt6-srpm-macros.noarch
 qt6ct
 qt6ct
 qt6pas
@@ -49843,7 +49929,6 @@ rpc2-devel
 rpcgen
 rpcsvc-proto-devel
 rpcsvc-proto-devel
-rpi-imager
 rpick
 rpkg.noarch
 rpkg-common.noarch
@@ -49878,6 +49963,7 @@ rpm-plugin-ima
 rpm-plugin-prioreset
 rpm-plugin-syslog
 rpm-plugin-unshare
+rpm-sequoia
 rpm-sequoia
 rpm-sequoia-devel
 rpm-sequoia-devel
@@ -51015,6 +51101,7 @@ ruqola
 ruqola-doc.noarch
 rusers
 rusers-server
+rust
 rust-Inflector+default-devel.noarch
 rust-Inflector+heavyweight-devel.noarch
 rust-Inflector+lazy_static-devel.noarch
@@ -52579,6 +52666,11 @@ rust-cargo_metadata0.15+builder-devel.noarch
 rust-cargo_metadata0.15+default-devel.noarch
 rust-cargo_metadata0.15+derive_builder-devel.noarch
 rust-cargo_metadata0.15-devel.noarch
+rust-cargo_metadata0.18+builder-devel.noarch
+rust-cargo_metadata0.18+default-devel.noarch
+rust-cargo_metadata0.18+derive_builder-devel.noarch
+rust-cargo_metadata0.18+unstable-devel.noarch
+rust-cargo_metadata0.18-devel.noarch
 rust-cargo_toml+default-devel.noarch
 rust-cargo_toml+features-devel.noarch
 rust-cargo_toml-devel.noarch
@@ -53766,6 +53858,7 @@ rust-dbus0.8+default-devel.noarch
 rust-dbus0.8+futures-devel.noarch
 rust-dbus0.8+no-string-validation-devel.noarch
 rust-dbus0.8-devel.noarch
+rust-debugger-common.noarch
 rust-decimal+default-devel.noarch
 rust-decimal+ord_subset-devel.noarch
 rust-decimal+rustc-serialize-devel.noarch
@@ -55043,6 +55136,7 @@ rust-fxhash+default-devel.noarch
 rust-fxhash-devel.noarch
 rust-gcd+default-devel.noarch
 rust-gcd-devel.noarch
+rust-gdb.noarch
 rust-gdk+default-devel.noarch
 rust-gdk+unsafe-assume-initialized-devel.noarch
 rust-gdk+v3_24-devel.noarch
@@ -55333,6 +55427,7 @@ rust-gix+async-network-client-devel.noarch
 rust-gix+async-std-devel.noarch
 rust-gix+attributes-devel.noarch
 rust-gix+basic-devel.noarch
+rust-gix+blame-devel.noarch
 rust-gix+blob-diff-devel.noarch
 rust-gix+blocking-http-transport-curl-devel.noarch
 rust-gix+blocking-http-transport-reqwest-devel.noarch
@@ -55362,6 +55457,8 @@ rust-gix+mailmap-devel.noarch
 rust-gix+max-control-devel.noarch
 rust-gix+max-performance-devel.noarch
 rust-gix+max-performance-safe-devel.noarch
+rust-gix+merge-devel.noarch
+rust-gix+need-more-recent-msrv-devel.noarch
 rust-gix+pack-cache-lru-dynamic-devel.noarch
 rust-gix+pack-cache-lru-static-devel.noarch
 rust-gix+parallel-devel.noarch
@@ -55375,6 +55472,7 @@ rust-gix+serde-devel.noarch
 rust-gix+status-devel.noarch
 rust-gix+tracing-detail-devel.noarch
 rust-gix+tracing-devel.noarch
+rust-gix+tree-editor-devel.noarch
 rust-gix+verbose-object-parsing-errors-devel.noarch
 rust-gix+worktree-archive-devel.noarch
 rust-gix+worktree-mutation-devel.noarch
@@ -55397,6 +55495,8 @@ rust-gix-attributes+serde-devel.noarch
 rust-gix-attributes-devel.noarch
 rust-gix-bitmap+default-devel.noarch
 rust-gix-bitmap-devel.noarch
+rust-gix-blame+default-devel.noarch
+rust-gix-blame-devel.noarch
 rust-gix-chunk+default-devel.noarch
 rust-gix-chunk-devel.noarch
 rust-gix-command+default-devel.noarch
@@ -55425,6 +55525,7 @@ rust-gix-devel.noarch
 rust-gix-diff+blob-devel.noarch
 rust-gix-diff+default-devel.noarch
 rust-gix-diff+document-features-devel.noarch
+rust-gix-diff+index-devel.noarch
 rust-gix-diff+serde-devel.noarch
 rust-gix-diff-devel.noarch
 rust-gix-dir+default-devel.noarch
@@ -55485,6 +55586,10 @@ rust-gix-mailmap+default-devel.noarch
 rust-gix-mailmap+document-features-devel.noarch
 rust-gix-mailmap+serde-devel.noarch
 rust-gix-mailmap-devel.noarch
+rust-gix-merge+default-devel.noarch
+rust-gix-merge+document-features-devel.noarch
+rust-gix-merge+serde-devel.noarch
+rust-gix-merge-devel.noarch
 rust-gix-negotiate+default-devel.noarch
 rust-gix-negotiate-devel.noarch
 rust-gix-object+default-devel.noarch
@@ -55531,8 +55636,10 @@ rust-gix-protocol+async-trait-devel.noarch
 rust-gix-protocol+blocking-client-devel.noarch
 rust-gix-protocol+default-devel.noarch
 rust-gix-protocol+document-features-devel.noarch
+rust-gix-protocol+fetch-devel.noarch
 rust-gix-protocol+futures-io-devel.noarch
 rust-gix-protocol+futures-lite-devel.noarch
+rust-gix-protocol+handshake-devel.noarch
 rust-gix-protocol+serde-devel.noarch
 rust-gix-protocol-devel.noarch
 rust-gix-quote+default-devel.noarch
@@ -55546,6 +55653,7 @@ rust-gix-refspec-devel.noarch
 rust-gix-revision+default-devel.noarch
 rust-gix-revision+describe-devel.noarch
 rust-gix-revision+document-features-devel.noarch
+rust-gix-revision+merge_base-devel.noarch
 rust-gix-revision+serde-devel.noarch
 rust-gix-revision-devel.noarch
 rust-gix-revwalk+default-devel.noarch
@@ -55554,6 +55662,9 @@ rust-gix-sec+default-devel.noarch
 rust-gix-sec+document-features-devel.noarch
 rust-gix-sec+serde-devel.noarch
 rust-gix-sec-devel.noarch
+rust-gix-shallow+default-devel.noarch
+rust-gix-shallow+serde-devel.noarch
+rust-gix-shallow-devel.noarch
 rust-gix-status+default-devel.noarch
 rust-gix-status+document-features-devel.noarch
 rust-gix-status+worktree-rewrites-devel.noarch
@@ -56859,6 +56970,10 @@ rust-imagequant-sys+capi-devel.noarch
 rust-imagequant-sys+default-devel.noarch
 rust-imagequant-sys+threads-devel.noarch
 rust-imagequant-sys-devel.noarch
+rust-imago+default-devel.noarch
+rust-imago+sync-wrappers-devel.noarch
+rust-imago+vm-memory-devel.noarch
+rust-imago-devel.noarch
 rust-imara-diff+default-devel.noarch
 rust-imara-diff+unified_diff-devel.noarch
 rust-imara-diff-devel.noarch
@@ -60429,6 +60544,14 @@ rust-pulldown-cmark-devel.noarch
 rust-pulldown-cmark-escape+default-devel.noarch
 rust-pulldown-cmark-escape+simd-devel.noarch
 rust-pulldown-cmark-escape-devel.noarch
+rust-pulldown-cmark0.11+default-devel.noarch
+rust-pulldown-cmark0.11+gen-tests-devel.noarch
+rust-pulldown-cmark0.11+getopts-devel.noarch
+rust-pulldown-cmark0.11+html-devel.noarch
+rust-pulldown-cmark0.11+pulldown-cmark-escape-devel.noarch
+rust-pulldown-cmark0.11+serde-devel.noarch
+rust-pulldown-cmark0.11+simd-devel.noarch
+rust-pulldown-cmark0.11-devel.noarch
 rust-pulldown-cmark0.8+default-devel.noarch
 rust-pulldown-cmark0.8+gen-tests-devel.noarch
 rust-pulldown-cmark0.8+getopts-devel.noarch
@@ -63257,6 +63380,7 @@ rust-statrs-devel.noarch
 rust-stats_alloc+default-devel.noarch
 rust-stats_alloc-devel.noarch
 rust-std-static
+rust-std-static
 rust-std-static-i686-pc-windows-gnu.noarch
 rust-std-static-wasm32-unknown-unknown.noarch
 rust-std-static-wasm32-wasi.noarch
@@ -63280,6 +63404,10 @@ rust-str_indices+simd-devel.noarch
 rust-str_indices-devel.noarch
 rust-str_stack+default-devel.noarch
 rust-str_stack-devel.noarch
+rust-streaming-iterator+alloc-devel.noarch
+rust-streaming-iterator+default-devel.noarch
+rust-streaming-iterator+std-devel.noarch
+rust-streaming-iterator-devel.noarch
 rust-streaming-stats+default-devel.noarch
 rust-streaming-stats-devel.noarch
 rust-streebog+default-devel.noarch
@@ -63500,6 +63628,8 @@ rust-system76_ectool+hidapi-devel.noarch
 rust-system76_ectool+libc-devel.noarch
 rust-system76_ectool+std-devel.noarch
 rust-system76_ectool-devel.noarch
+rust-table_formatter+default-devel.noarch
+rust-table_formatter-devel.noarch
 rust-tabled+ansi-devel.noarch
 rust-tabled+ansi-str-devel.noarch
 rust-tabled+ansitok-devel.noarch
@@ -63831,6 +63961,14 @@ rust-tokei+serde_cbor-devel.noarch
 rust-tokei+serde_yaml-devel.noarch
 rust-tokei+yaml-devel.noarch
 rust-tokei-devel.noarch
+rust-tokei12+all-devel.noarch
+rust-tokei12+cbor-devel.noarch
+rust-tokei12+default-devel.noarch
+rust-tokei12+hex-devel.noarch
+rust-tokei12+serde_cbor-devel.noarch
+rust-tokei12+serde_yaml-devel.noarch
+rust-tokei12+yaml-devel.noarch
+rust-tokei12-devel.noarch
 rust-tokio+bytes-devel.noarch
 rust-tokio+default-devel.noarch
 rust-tokio+fs-devel.noarch
@@ -64329,6 +64467,9 @@ rust-tree-sitter-tags-devel.noarch
 rust-tree-sitter0.20+default-devel.noarch
 rust-tree-sitter0.20+lazy_static-devel.noarch
 rust-tree-sitter0.20-devel.noarch
+rust-tree-sitter0.23+default-devel.noarch
+rust-tree-sitter0.23+std-devel.noarch
+rust-tree-sitter0.23-devel.noarch
 rust-tree_magic_db+default-devel.noarch
 rust-tree_magic_db-devel.noarch
 rust-tree_magic_mini+default-devel.noarch
@@ -65965,6 +66106,7 @@ rust2rpm.noarch
 rust2rpm-helper
 rustcat
 rustfmt
+rustup
 rutabaga-gfx-ffi-devel
 rv
 rvm
@@ -66115,6 +66257,8 @@ sbcl
 sbd
 sbd-tests
 sbd-tests
+sblg
+sblg-doc.noarch
 sblim-cim-client.noarch
 sblim-cim-client-javadoc.noarch
 sblim-cim-client-manual.noarch
@@ -66396,6 +66540,7 @@ secvarctl
 sediment.noarch
 sedutil
 seeker
+selenium-manager
 selint
 selinux-policy.noarch
 selinux-policy-devel.noarch
@@ -66449,6 +66594,7 @@ sequoia-sqv
 sequoia-wot
 ser2net
 serafettin-cartoon-fonts.noarch
+serd
 serd
 serd-devel
 serd-devel
@@ -67075,6 +67221,7 @@ soprano-apidocs.noarch
 soprano-devel
 soprano-devel
 sopwith
+sord
 sord
 sord-devel
 sord-devel
@@ -67929,7 +68076,6 @@ systemd
 systemd-boot-unsigned
 systemd-bootchart
 systemd-container
-systemd-devel
 systemd-devel
 systemd-journal-remote
 systemd-networkd-defaults.noarch
@@ -75352,7 +75498,6 @@ tlog
 tlog
 tlomt-league-gothic-fonts.noarch
 tlomt-sniglet-fonts.noarch
-tlp.noarch
 tlp-rdw.noarch
 tlpi
 tlpi-examples.noarch
@@ -75748,6 +75893,7 @@ typetogether-literata-fonts.noarch
 typetype-molot-fonts.noarch
 tyuploader
 tzclock
+tzdata.noarch
 tzdata-java.noarch
 u2f-host
 u2f-server
@@ -75945,8 +76091,11 @@ un-extra-yetgul-fonts.noarch
 unace
 unar
 unbound
+unbound-anchor
 unbound-devel
 unbound-devel
+unbound-dracut
+unbound-libs
 unbound-libs
 unbound-munin.noarch
 unbound-utils
@@ -76520,9 +76669,13 @@ vim-ale.noarch
 vim-ansible.noarch
 vim-command-t
 vim-commentary.noarch
+vim-common
 vim-ctrlp.noarch
+vim-data.noarch
 vim-default-editor.noarch
 vim-devicons.noarch
+vim-enhanced
+vim-filesystem.noarch
 vim-fugitive.noarch
 vim-fugitive-gitlab.noarch
 vim-fugitive-pagure.noarch
@@ -76539,6 +76692,7 @@ vim-latex.noarch
 vim-latex-doc.noarch
 vim-mediawiki.noarch
 vim-merlin.noarch
+vim-minimal
 vim-nerdtree.noarch
 vim-omnicppcomplete.noarch
 vim-pathogen.noarch
@@ -76908,7 +77062,6 @@ wayfire-config-manager
 wayfire-devel
 wayfire-devel
 wayland-devel
-wayland-devel
 wayland-doc.noarch
 wayland-logout
 wayland-protocols-devel.noarch
@@ -77142,9 +77295,11 @@ winpdb.noarch
 wipe
 wireguard-tools
 wireplumber
+wireplumber
 wireplumber-devel
 wireplumber-devel
 wireplumber-doc
+wireplumber-libs
 wireplumber-libs
 wireshark
 wireshark-cli
@@ -77491,6 +77646,8 @@ xen
 xen-devel
 xen-doc.noarch
 xen-hypervisor
+xen-libs
+xen-licenses
 xen-ocaml
 xen-ocaml-devel
 xen-runtime
@@ -77861,6 +78018,7 @@ xorg-x11-server-Xorg
 xorg-x11-server-Xspice
 xorg-x11-server-Xvfb
 xorg-x11-server-Xwayland
+xorg-x11-server-Xwayland
 xorg-x11-server-Xwayland-devel
 xorg-x11-server-Xwayland-devel
 xorg-x11-server-common
@@ -78073,6 +78231,7 @@ xwm
 xwrits
 xwud
 xwxapt
+xxd
 xxhash
 xxhash-devel
 xxhash-devel
@@ -78387,6 +78546,7 @@ zita-resampler
 zita-resampler-devel
 zita-resampler-devel
 zita-rev1
+zix
 zix
 zix-devel
 zix-devel

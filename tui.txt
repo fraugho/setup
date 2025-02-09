@@ -25,3 +25,5 @@ pprof - performance
 tldr - man but shorter
 
 flamegraph - perf visualizer
+
+jq - json preview
