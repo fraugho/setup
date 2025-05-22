@@ -5,7 +5,7 @@ cp ~/zsh-config/.zshrc ~/
 rm -rf ~/zsh-config
 
 #tmux
-git clone git@github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+#git clone git@github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 #alacritty
 git clone git@github.com:fraugho/alacritty.git .config/alacritty

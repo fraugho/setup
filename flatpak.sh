@@ -17,6 +17,16 @@ echo "Installing Vivaldi Flatpak"
 flatpak install -y flathub com.vivaldi.Vivaldi
 sudo ln -s /var/lib/flatpak/exports/bin/com.vivaldi.Vivaldi /usr/local/bin/vivaldi
 
+# DevTools flatpak
+echo "Installing DevToolBox Flatpak"
+flatpak install -y me.iepure.devtoolbox
+sudo ln -s /var/lib/flatpak/exports/bin/me.iepure.devtoolbox /usr/local/bin/devtoolbox
+
+# Columb Flatpak
+ echo "Installing AsciiDraw Flatpak"
+ flatpak install -y io.github.nokse22.asciidraw
+ sudo ln -s /var/lib/flatpak/exports/bin/io.github.nokse22.asciidraw /usr/local/bin/asciidraw
+
 # Jellyfin Flatpak
 echo "Installing Jellyfin Flatpak"
 flatpak install -y flathub com.github.iwalton3.jellyfin-media-player
@@ -58,12 +68,12 @@ echo "Installing Logisim Flatpak..."
 flatpak install -y flathub com.github.reds.LogisimEvolution
 sudo ln -s /var/lib/flatpak/exports/bin/com.github.reds.LogisimEvolution /usr/bin/logisim
 
-# Spotify Flatpak
-echo "Installing Spotify Flatpak..."
-flatpak install -y flathub com.spotify.Client
-sudo ln -s /var/lib/flatpak/exports/bin/com.spotify.Client /usr/bin/spotify
-
 # Flatseal Flatpak
 echo "Installing Flatseal..."
 flatpak install -y flathub com.github.tchx84.Flatseal
 sudo ln -s /var/lib/flatpak/exports/bin/com.github.tchx84.Flatseal /usr/bin/flatseal
+
+# Parsec Flatpak
+echo "Installing Parsec..."
+flatpak install -y flathub com.parsecgaming.parsec
+sudo ln -s /var/lib/flatpak/exports/bin/com.parsecgaming.parsec /usr/bin/parsec
