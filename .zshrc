@@ -7,7 +7,11 @@ antigen use oh-my-zsh
 # Load plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle jeffreytse/zsh-vi-mode
+#antigen bundle jeffreytse/zsh-vi-mode
+#
+#History
+HISTSIZE=10000
+SAVEHIST=10000
 
 # Load the powerlevel10k theme
 antigen theme romkatv/powerlevel10k
@@ -16,8 +20,7 @@ export EDITOR='nvim'
 
 #for rocm
 export PATH=$PATH:/opt/rocm/bin
-#export PATH=$PATH:/opt/rocm/lib
-#export PATH=$PATH:/opt/rocm/hip
+#export PATH=$PATH:/opt/rocm/lib export PATH=$PATH:/opt/rocm/hip
 #export HIP_PATH=/opt/rocm/hip
 #export HIP_PATH=/opt/rocm/hip
 export CPATH=$CPATH:/opt/rocm/lib
@@ -40,6 +43,24 @@ fastfetch --logo blackarch --color white --logo-color-1 white --logo-color-2 whi
 alias ls='eza'
 alias ll='ls -lah'
 alias gs='git status'
+alias install='sudo dnf install $(cat install.txt)'
+alias drive='cd /run/media/black'
+alias spotdl='uv run spotdl'
+
+alias mr='mullvad reconnect'
+alias mc='mullvad connect'
+alias md='mullvad disconnect'
+alias trash='z ~/.local/share/Trash/files'
+alias nv='nvim .'
+
+alias tc='cat ~/docs/notes/todo/to_code.txt'
+
+alias cc='gcc -g main.c -o m; ./m; rm -f core; mv -n *core* core'
+alias dbg='gdb ./m core'
+alias ccpp='g++ -g main.cpp -o m && ./m'
+alias core='mv *core* core'
+alias lck='mullvad lockdown-mode set on && mullvad lan set block && mc && mullvad auto-connect set on && sudo systemctl start firewalld'
+alias ope='mullvad lockdown-mode set off && mullvad lan set allow && md && mullvad auto-connect set off && sudo systemctl stop firewalld'
 
 # Change comment color to white
 ZSH_HIGHLIGHT_STYLES[comment]='fg=white'
@@ -111,3 +132,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 alias lzd='lazydocker'
+
+export PATH="$PATH:/home/black/.modular/bin"
