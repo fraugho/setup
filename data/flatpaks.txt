@@ -1,0 +1,15 @@
+com.valvesoftware.Steam
+com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+com.vivaldi.Vivaldi
+me.iepure.devtoolbox
+io.github.nokse22.asciidraw
+com.github.iwalton3.jellyfin-media-player
+com.obsproject.Studio
+org.mozilla.firefox
+io.gitlab.librewolf-community
+org.onlyoffice.desktopeditors
+org.torproject.torbrowser-launcher
+net.mullvad.MullvadBrowser
+com.github.reds.LogisimEvolution
+com.github.tchx84.Flatseal
+com.parsecgaming.parsec
