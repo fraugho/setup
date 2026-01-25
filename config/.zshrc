@@ -134,3 +134,34 @@ function y() {
 alias lzd='lazydocker'
 
 export PATH="$PATH:/home/black/.modular/bin"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/black/.lmstudio/bin"
+# End of LM Studio CLI section
+#
+export PATH="$HOME/.zvm/bin:$HOME/.zvm/self:$PATH"
+
+# DNF wrapper that auto-updates packages.txt and commits
+SETUP_DIR="$HOME/setup"
+dnf() {
+    local action="$1"
+    shift
+    local packages="$*"
+
+    command sudo dnf "$action" $packages
+
+    if [[ "$action" == "install" || "$action" == "remove" || "$action" == "erase" || "$action" == "autoremove" ]]; then
+        command dnf list installed | awk 'NR > 1 {sub(/\.x86_64$/,"", $1); sub(/\.i686$/, "", $1); sub(/\.noarch$/, "", $1); print $1}' > "$SETUP_DIR/data/packages.txt"
+
+        local msg
+        if [[ "$action" == "install" ]]; then
+            msg="installing $packages"
+        else
+            msg="removing $packages"
+        fi
+
+        git -C "$SETUP_DIR" add data/packages.txt
+        git -C "$SETUP_DIR" commit -m "$msg"
+        git -C "$SETUP_DIR" push
+    fi
+}

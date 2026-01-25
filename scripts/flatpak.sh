@@ -6,7 +6,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Steam Flatpak
 echo "Installing Steam Flatpak..."
 flatpak install -y flathub com.valvesoftware.Steam
-sudo ln -s /var/lib/flatpak/exports/bin/com.valvesoftware.Steam /usr/bin/steam
+sudo ln -sf /var/lib/flatpak/exports/bin/com.valvesoftware.Steam /usr/bin/steam
 
 # Proton-GE Flatpak
 echo "Installing Proton-GE Flatpak"
@@ -15,65 +15,65 @@ flatpak install -y com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 # Vivaldi Flatpak
 echo "Installing Vivaldi Flatpak"
 flatpak install -y flathub com.vivaldi.Vivaldi
-sudo ln -s /var/lib/flatpak/exports/bin/com.vivaldi.Vivaldi /usr/local/bin/vivaldi
+sudo ln -sf /var/lib/flatpak/exports/bin/com.vivaldi.Vivaldi /usr/local/bin/vivaldi
 
 # DevTools flatpak
 echo "Installing DevToolBox Flatpak"
 flatpak install -y me.iepure.devtoolbox
-sudo ln -s /var/lib/flatpak/exports/bin/me.iepure.devtoolbox /usr/local/bin/devtoolbox
+sudo ln -sf /var/lib/flatpak/exports/bin/me.iepure.devtoolbox /usr/local/bin/devtoolbox
 
-# Columb Flatpak
- echo "Installing AsciiDraw Flatpak"
- flatpak install -y io.github.nokse22.asciidraw
- sudo ln -s /var/lib/flatpak/exports/bin/io.github.nokse22.asciidraw /usr/local/bin/asciidraw
+# AsciiDraw Flatpak
+echo "Installing AsciiDraw Flatpak"
+flatpak install -y io.github.nokse22.asciidraw
+sudo ln -sf /var/lib/flatpak/exports/bin/io.github.nokse22.asciidraw /usr/local/bin/asciidraw
 
 # Jellyfin Flatpak
 echo "Installing Jellyfin Flatpak"
 flatpak install -y flathub com.github.iwalton3.jellyfin-media-player
-sudo ln -s /var/lib/flatpak/exports/bin/com.github.iwalton3.jellyfin-media-player /usr/local/bin/jellyfin
+sudo ln -sf /var/lib/flatpak/exports/bin/com.github.iwalton3.jellyfin-media-player /usr/local/bin/jellyfin
 
 # OBS Flatpak
 echo "Installing OBS Flatpak"
 flatpak install -y flathub com.obsproject.Studio
 sudo flatpak override --device=all com.obsproject.Studio
-sudo ln -s /var/lib/flatpak/exports/bin/com.obsproject.Studio /usr/local/bin/obs
+sudo ln -sf /var/lib/flatpak/exports/bin/com.obsproject.Studio /usr/local/bin/obs
 
 # Firefox Flatpak
 echo "Installing Firefox Flatpak..."
 flatpak install -y flathub org.mozilla.firefox
-sudo ln -s /var/lib/flatpak/exports/bin/org.mozilla.firefox /usr/bin/firefox
+sudo ln -sf /var/lib/flatpak/exports/bin/org.mozilla.firefox /usr/bin/firefox
 
-# Librewolf Flatkpak
+# Librewolf Flatpak
 echo "Installing Librewolf Flatpak..."
 flatpak install -y flathub io.gitlab.librewolf-community
-sudo ln -s /var/lib/flatpak/exports/bin/io.gitlab.librewolf-community /usr/bin/librewolf
+sudo ln -sf /var/lib/flatpak/exports/bin/io.gitlab.librewolf-community /usr/bin/librewolf
 
 # OnlyOffice Flatpak
 echo "Installing OnlyOffice Flatpak"
 flatpak install -y flathub org.onlyoffice.desktopeditors
-sudo ln -s /var/lib/flatpak/exports/bin/org.onlyoffice.desktopeditors /usr/bin/only-office
+sudo ln -sf /var/lib/flatpak/exports/bin/org.onlyoffice.desktopeditors /usr/bin/only-office
 
 # Tor Browser Flatpak
 echo "Installing Tor Browser Flatpak..."
 flatpak install -y flathub org.torproject.torbrowser-launcher
-sudo ln -s /var/lib/flatpak/exports/bin/org.torproject.torbrowser-launcher /usr/bin/tor-browser
+sudo ln -sf /var/lib/flatpak/exports/bin/org.torproject.torbrowser-launcher /usr/bin/tor-browser
 
-# Mullvad Browser  Flatpak
+# Mullvad Browser Flatpak
 echo "Installing Mullvad Browser Flatpak..."
 flatpak install -y flathub net.mullvad.MullvadBrowser
-sudo ln -s /var/lib/flatpak/exports/bin/net.mullvad.MullvadBrowser /usr/bin/mullvad-browser
+sudo ln -sf /var/lib/flatpak/exports/bin/net.mullvad.MullvadBrowser /usr/bin/mullvad-browser
 
-# Logism Flatpak
+# Logisim Flatpak
 echo "Installing Logisim Flatpak..."
 flatpak install -y flathub com.github.reds.LogisimEvolution
-sudo ln -s /var/lib/flatpak/exports/bin/com.github.reds.LogisimEvolution /usr/bin/logisim
+sudo ln -sf /var/lib/flatpak/exports/bin/com.github.reds.LogisimEvolution /usr/bin/logisim
 
 # Flatseal Flatpak
 echo "Installing Flatseal..."
 flatpak install -y flathub com.github.tchx84.Flatseal
-sudo ln -s /var/lib/flatpak/exports/bin/com.github.tchx84.Flatseal /usr/bin/flatseal
+sudo ln -sf /var/lib/flatpak/exports/bin/com.github.tchx84.Flatseal /usr/bin/flatseal
 
 # Parsec Flatpak
 echo "Installing Parsec..."
 flatpak install -y flathub com.parsecgaming.parsec
-sudo ln -s /var/lib/flatpak/exports/bin/com.parsecgaming.parsec /usr/bin/parsec
+sudo ln -sf /var/lib/flatpak/exports/bin/com.parsecgaming.parsec /usr/bin/parsec
