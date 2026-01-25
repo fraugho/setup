@@ -1,79 +1,40 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+FLATPAKS_FILE="$SCRIPT_DIR/../data/flatpaks.txt"
+
 # Flathub Setup
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Steam Flatpak
-echo "Installing Steam Flatpak..."
-flatpak install -y flathub com.valvesoftware.Steam
-sudo ln -sf /var/lib/flatpak/exports/bin/com.valvesoftware.Steam /usr/bin/steam
+# Install all flatpaks from list
+while IFS= read -r app || [[ -n "$app" ]]; do
+    [[ -z "$app" || "$app" =~ ^# ]] && continue
+    echo "Installing $app..."
+    flatpak install -y flathub "$app"
+done < "$FLATPAKS_FILE"
 
-# Proton-GE Flatpak
-echo "Installing Proton-GE Flatpak"
-flatpak install -y com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+# OBS needs device access
+flatpak override --user --device=all com.obsproject.Studio
 
-# Vivaldi Flatpak
-echo "Installing Vivaldi Flatpak"
-flatpak install -y flathub com.vivaldi.Vivaldi
-sudo ln -sf /var/lib/flatpak/exports/bin/com.vivaldi.Vivaldi /usr/local/bin/vivaldi
+# Create symlinks for CLI access
+declare -A symlinks=(
+    ["com.valvesoftware.Steam"]="/usr/bin/steam"
+    ["com.vivaldi.Vivaldi"]="/usr/local/bin/vivaldi"
+    ["me.iepure.devtoolbox"]="/usr/local/bin/devtoolbox"
+    ["io.github.nokse22.asciidraw"]="/usr/local/bin/asciidraw"
+    ["com.github.iwalton3.jellyfin-media-player"]="/usr/local/bin/jellyfin"
+    ["com.obsproject.Studio"]="/usr/local/bin/obs"
+    ["org.mozilla.firefox"]="/usr/bin/firefox"
+    ["io.gitlab.librewolf-community"]="/usr/bin/librewolf"
+    ["org.onlyoffice.desktopeditors"]="/usr/bin/only-office"
+    ["org.torproject.torbrowser-launcher"]="/usr/bin/tor-browser"
+    ["net.mullvad.MullvadBrowser"]="/usr/bin/mullvad-browser"
+    ["com.github.reds.LogisimEvolution"]="/usr/bin/logisim"
+    ["com.github.tchx84.Flatseal"]="/usr/bin/flatseal"
+    ["com.parsecgaming.parsec"]="/usr/bin/parsec"
+)
 
-# DevTools flatpak
-echo "Installing DevToolBox Flatpak"
-flatpak install -y me.iepure.devtoolbox
-sudo ln -sf /var/lib/flatpak/exports/bin/me.iepure.devtoolbox /usr/local/bin/devtoolbox
-
-# AsciiDraw Flatpak
-echo "Installing AsciiDraw Flatpak"
-flatpak install -y io.github.nokse22.asciidraw
-sudo ln -sf /var/lib/flatpak/exports/bin/io.github.nokse22.asciidraw /usr/local/bin/asciidraw
-
-# Jellyfin Flatpak
-echo "Installing Jellyfin Flatpak"
-flatpak install -y flathub com.github.iwalton3.jellyfin-media-player
-sudo ln -sf /var/lib/flatpak/exports/bin/com.github.iwalton3.jellyfin-media-player /usr/local/bin/jellyfin
-
-# OBS Flatpak
-echo "Installing OBS Flatpak"
-flatpak install -y flathub com.obsproject.Studio
-sudo flatpak override --device=all com.obsproject.Studio
-sudo ln -sf /var/lib/flatpak/exports/bin/com.obsproject.Studio /usr/local/bin/obs
-
-# Firefox Flatpak
-echo "Installing Firefox Flatpak..."
-flatpak install -y flathub org.mozilla.firefox
-sudo ln -sf /var/lib/flatpak/exports/bin/org.mozilla.firefox /usr/bin/firefox
-
-# Librewolf Flatpak
-echo "Installing Librewolf Flatpak..."
-flatpak install -y flathub io.gitlab.librewolf-community
-sudo ln -sf /var/lib/flatpak/exports/bin/io.gitlab.librewolf-community /usr/bin/librewolf
-
-# OnlyOffice Flatpak
-echo "Installing OnlyOffice Flatpak"
-flatpak install -y flathub org.onlyoffice.desktopeditors
-sudo ln -sf /var/lib/flatpak/exports/bin/org.onlyoffice.desktopeditors /usr/bin/only-office
-
-# Tor Browser Flatpak
-echo "Installing Tor Browser Flatpak..."
-flatpak install -y flathub org.torproject.torbrowser-launcher
-sudo ln -sf /var/lib/flatpak/exports/bin/org.torproject.torbrowser-launcher /usr/bin/tor-browser
-
-# Mullvad Browser Flatpak
-echo "Installing Mullvad Browser Flatpak..."
-flatpak install -y flathub net.mullvad.MullvadBrowser
-sudo ln -sf /var/lib/flatpak/exports/bin/net.mullvad.MullvadBrowser /usr/bin/mullvad-browser
-
-# Logisim Flatpak
-echo "Installing Logisim Flatpak..."
-flatpak install -y flathub com.github.reds.LogisimEvolution
-sudo ln -sf /var/lib/flatpak/exports/bin/com.github.reds.LogisimEvolution /usr/bin/logisim
-
-# Flatseal Flatpak
-echo "Installing Flatseal..."
-flatpak install -y flathub com.github.tchx84.Flatseal
-sudo ln -sf /var/lib/flatpak/exports/bin/com.github.tchx84.Flatseal /usr/bin/flatseal
-
-# Parsec Flatpak
-echo "Installing Parsec..."
-flatpak install -y flathub com.parsecgaming.parsec
-sudo ln -sf /var/lib/flatpak/exports/bin/com.parsecgaming.parsec /usr/bin/parsec
+for app in "${!symlinks[@]}"; do
+    target="${symlinks[$app]}"
+    sudo ln -sf "/var/lib/flatpak/exports/bin/$app" "$target"
+done

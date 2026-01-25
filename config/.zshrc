@@ -141,8 +141,32 @@ export PATH="$PATH:/home/black/.lmstudio/bin"
 #
 export PATH="$HOME/.zvm/bin:$HOME/.zvm/self:$PATH"
 
-# DNF wrapper that auto-updates packages.txt and commits
+# Wrappers that auto-update package lists and commit
 SETUP_DIR="$HOME/setup"
+
+flatpak() {
+    local action="$1"
+    shift
+    local packages="$*"
+
+    command flatpak "$action" $packages
+
+    if [[ "$action" == "install" || "$action" == "remove" || "$action" == "uninstall" ]]; then
+        command flatpak list --app --columns=application > "$SETUP_DIR/data/flatpaks.txt"
+
+        local msg
+        if [[ "$action" == "install" ]]; then
+            msg="installing $packages"
+        else
+            msg="removing $packages"
+        fi
+
+        git -C "$SETUP_DIR" add data/flatpaks.txt
+        git -C "$SETUP_DIR" commit -m "$msg"
+        git -C "$SETUP_DIR" push
+    fi
+}
+
 dnf() {
     local action="$1"
     shift
