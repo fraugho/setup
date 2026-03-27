@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /var/lib/flatpak/exports/bin/io.gitlab.librewolf-community --private-window "$@"
+exec librewolf --private-window "$@"

@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Add the Mullvad repository server to dnf
-sudo dnf config-manager --add-repo https://repository.mullvad.net/rpm/stable/mullvad.repo
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-sudo dnf install $(cat "$SCRIPT_DIR/../data/packages.txt")
+
+# Add third-party repos
+sudo dnf config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+sudo dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
+# Install all packages from the curated list
+sudo dnf install -y $(cat "$SCRIPT_DIR/../data/packages.txt")

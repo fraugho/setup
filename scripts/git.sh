@@ -1,16 +1,19 @@
 #!/bin/bash
 
-#alacritty
-git clone git@github.com:fraugho/alacritty.git ~/.config/alacritty
+clone_or_pull() {
+    local repo="$1"
+    local target="$2"
 
-#neovim
-git clone git@github.com:fraugho/nvim.git ~/.config/nvim
+    if [ -d "$target/.git" ]; then
+        echo "  Pulling latest for $target..."
+        git -C "$target" pull
+    else
+        echo "  Cloning $repo -> $target..."
+        git clone "https://github.com/fraugho/${repo}.git" "$target"
+    fi
+}
 
-#picom
-git clone git@github.com:fraugho/picom.git ~/.config/picom
-
-#hyprland
-git clone git@github.com:fraugho/hypr.git ~/.config/hypr
-
-#Wallpapers
-git clone git@github.com:fraugho/wallpapers.git ~/.config/wallpapers
+clone_or_pull alacritty ~/.config/alacritty
+clone_or_pull nvim      ~/.config/nvim
+clone_or_pull picom     ~/.config/picom
+clone_or_pull hypr      ~/.config/hypr

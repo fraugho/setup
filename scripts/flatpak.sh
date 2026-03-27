@@ -13,28 +13,18 @@ while IFS= read -r app || [[ -n "$app" ]]; do
     flatpak install -y flathub "$app"
 done < "$FLATPAKS_FILE"
 
-# OBS needs device access
-flatpak override --user --device=all com.obsproject.Studio
-
-# Create symlinks for CLI access
+# Symlink map: flatpak app ID -> CLI path
 declare -A symlinks=(
-    ["com.valvesoftware.Steam"]="/usr/bin/steam"
-    ["com.vivaldi.Vivaldi"]="/usr/local/bin/vivaldi"
-    ["me.iepure.devtoolbox"]="/usr/local/bin/devtoolbox"
-    ["io.github.nokse22.asciidraw"]="/usr/local/bin/asciidraw"
-    ["com.github.iwalton3.jellyfin-media-player"]="/usr/local/bin/jellyfin"
-    ["com.obsproject.Studio"]="/usr/local/bin/obs"
-    ["org.mozilla.firefox"]="/usr/bin/firefox"
-    ["io.gitlab.librewolf-community"]="/usr/bin/librewolf"
     ["org.onlyoffice.desktopeditors"]="/usr/bin/only-office"
     ["org.torproject.torbrowser-launcher"]="/usr/bin/tor-browser"
-    ["net.mullvad.MullvadBrowser"]="/usr/bin/mullvad-browser"
-    ["com.github.reds.LogisimEvolution"]="/usr/bin/logisim"
-    ["com.github.tchx84.Flatseal"]="/usr/bin/flatseal"
     ["com.parsecgaming.parsec"]="/usr/bin/parsec"
 )
 
+# Only create symlinks for apps that are actually installed
 for app in "${!symlinks[@]}"; do
-    target="${symlinks[$app]}"
-    sudo ln -sf "/var/lib/flatpak/exports/bin/$app" "$target"
+    if flatpak info "$app" > /dev/null 2>&1; then
+        target="${symlinks[$app]}"
+        sudo ln -sf "/var/lib/flatpak/exports/bin/$app" "$target"
+        echo "  Symlinked $app -> $target"
+    fi
 done

@@ -43,7 +43,6 @@ fastfetch --logo blackarch --color white --logo-color-1 white --logo-color-2 whi
 alias ls='eza'
 alias ll='ls -lah'
 alias gs='git status'
-alias install='sudo dnf install $(cat install.txt)'
 alias drive='cd /run/media/black'
 alias spotdl='uv run spotdl'
 
@@ -52,8 +51,30 @@ alias mc='mullvad connect'
 alias md='mullvad disconnect'
 alias trash='z ~/.local/share/Trash/files'
 alias nv='nvim .'
+alias cs='ls ~/setup/data/cheatsheets/ | sed "s/.md//" | fzf --preview "bat --color=always ~/setup/data/cheatsheets/{}.md" --bind "enter:execute(bat ~/setup/data/cheatsheets/{}.md)"'
 
 alias tc='cat ~/docs/notes/todo/to_code.txt'
+
+# Quick pick file by index
+# ck = list, ck N = print Nth, cx cmd N = run cmd on Nth
+ck() {
+    local -a items
+    items=(*)
+    if [[ $# -eq 0 ]]; then
+        local i=1 entries=()
+        for item in "${items[@]}"; do
+            entries+=("$i)$item")
+            ((i++))
+        done
+        printf '%s\n' "${entries[@]}" | column
+    else
+        echo "${items[$1]}"
+    fi
+}
+cx() {
+    local -a items=(*)
+    ${@[1,-2]} "${items[${@[-1]}]}"
+}
 
 alias cc='gcc -g main.c -o m; ./m; rm -f core; mv -n *core* core'
 alias dbg='gdb ./m core'
@@ -133,10 +154,10 @@ function y() {
 }
 alias lzd='lazydocker'
 
-export PATH="$PATH:/home/black/.modular/bin"
+export PATH="$PATH:$HOME/.modular/bin"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/black/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 #
 export PATH="$HOME/.zvm/bin:$HOME/.zvm/self:$PATH"
@@ -175,12 +196,20 @@ dnf() {
     command sudo dnf "$action" $packages
 
     if [[ "$action" == "install" || "$action" == "remove" || "$action" == "erase" || "$action" == "autoremove" ]]; then
-        command dnf list installed | awk 'NR > 1 {sub(/\.x86_64$/,"", $1); sub(/\.i686$/, "", $1); sub(/\.noarch$/, "", $1); print $1}' > "$SETUP_DIR/data/packages.txt"
-
+        local pkg_file="$SETUP_DIR/data/packages.txt"
         local msg
+
         if [[ "$action" == "install" ]]; then
+            # Append new packages to curated list (skip duplicates)
+            for pkg in $packages; do
+                grep -qxF "$pkg" "$pkg_file" || echo "$pkg" >> "$pkg_file"
+            done
             msg="installing $packages"
         else
+            # Remove packages from curated list
+            for pkg in $packages; do
+                sed -i "/^${pkg}$/d" "$pkg_file"
+            done
             msg="removing $packages"
         fi
 

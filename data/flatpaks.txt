@@ -1,8 +1,9 @@
 com.discordapp.Discord
 com.google.ChromeDev
 com.parsecgaming.parsec
-io.gitlab.librewolf-community
 md.obsidian.Obsidian
 org.chromium.Chromium
 org.onlyoffice.desktopeditors
 org.torproject.torbrowser-launcher
+com.github.marktext.marktext
+com.github.libresprite.LibreSprite
