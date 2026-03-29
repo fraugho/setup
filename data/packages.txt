@@ -6,11 +6,14 @@ greetd-tuigreet
 kitty
 rustup
 perf
-google-pprof
+pprof
 bemenu
 golang
 zig
 clang
+gcc
+make
+pkg-config
 git
 gh
 flatpak
@@ -38,7 +41,6 @@ evtest
 xev
 tldr
 flamegraph
-yazi
 texlive-scheme-medium
 fzf
 ripgrep
@@ -57,3 +59,4 @@ SDL2-devel
 raylib-devel
 notcurses-devel
 mako
+yazi

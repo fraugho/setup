@@ -151,7 +151,7 @@ ln -sf ~/.local/bin/LMStudio.AppImage ~/.local/bin/lmstudio
 ok "Installed to ~/.local/bin/lmstudio"
 
 step "Installing Claude Code and OpenCode (via npm)"
-npm install -g @anthropic-ai/claude-code opencode-ai
+sudo npm install -g @anthropic-ai/claude-code opencode-ai
 ok "Claude Code and OpenCode installed"
 
 step "Cloning dotfiles repos"
@@ -161,6 +161,12 @@ step "Installing wallpapers"
 mkdir -p ~/.config/wallpapers
 cp "$SCRIPT_DIR/wallpapers/"* ~/.config/wallpapers/
 ok "Copied to ~/.config/wallpapers/"
+
+step "Configuring waybar"
+mkdir -p ~/.config/waybar
+cp "$SCRIPT_DIR/config/waybar/config.jsonc" ~/.config/waybar/
+cp "$SCRIPT_DIR/config/waybar/style.css" ~/.config/waybar/
+ok "Copied waybar config and style"
 
 step "Configuring mako (notifications)"
 mkdir -p ~/.config/mako
@@ -183,6 +189,14 @@ done
 sudo systemctl enable greetd
 ok "Installed config and enabled greetd service"
 
+step "Setting default shell to zsh"
+if [ "$SHELL" != "$(which zsh)" ]; then
+    chsh -s "$(which zsh)"
+    ok "Default shell changed to zsh"
+else
+    ok "Already using zsh"
+fi
+
 step "Setting default applications"
 "$SCRIPT_DIR/scripts/default.sh"
 
@@ -190,13 +204,16 @@ if $ME_MODE; then
     step "Restoring LibreWolf profile"
     PROFILE_ZIP="$SCRIPT_DIR/data/librewolf-profile.zip"
     if [ -f "$PROFILE_ZIP" ]; then
-        # Launch LibreWolf once to create profile dir, then kill it
-        librewolf --headless &>/dev/null &
-        sleep 3
-        pkill -f librewolf || true
-        sleep 1
+        # Create profile dir if LibreWolf hasn't been launched yet
+        if [ ! -d ~/.librewolf ]; then
+            mkdir -p ~/.librewolf
+            librewolf --headless &>/dev/null &
+            sleep 5
+            pkill -f librewolf || true
+            sleep 1
+        fi
 
-        PROFILE_DIR=$(find ~/.librewolf -maxdepth 1 -name "*.default-default*" -type d | head -1)
+        PROFILE_DIR=$(find ~/.librewolf -maxdepth 1 -name "*.default*" -type d | head -1)
         if [ -z "$PROFILE_DIR" ]; then
             warn "No LibreWolf profile directory found, skipping"
         else

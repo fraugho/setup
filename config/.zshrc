@@ -154,6 +154,7 @@ function y() {
 }
 alias lzd='lazydocker'
 
+. "$HOME/.cargo/env" 2>/dev/null
 export PATH="$PATH:$HOME/.modular/bin"
 
 # Added by LM Studio CLI (lms)

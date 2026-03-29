@@ -5,9 +5,16 @@
 
 echo "Installing TUI tools from cargo/go/pip..."
 
+# Ensure Rust toolchain is installed
+if ! command -v cargo > /dev/null 2>&1; then
+    echo "  Installing Rust stable toolchain..."
+    rustup-init -y --no-modify-path
+    source "$HOME/.cargo/env"
+fi
+
 # rainfrog - TUI database client for postgres
-echo "  Installing rainfrog (cargo)..."
-cargo install rainfrog
+echo "  Installing rainfrog (cargo from git)..."
+cargo install --locked --git https://github.com/achristmascarl/rainfrog.git
 
 # lazydocker - TUI docker interface
 echo "  Installing lazydocker (go)..."
@@ -24,3 +31,4 @@ cargo install flamegraph
 # samply - sampling profiler, opens in Firefox profiler UI
 echo "  Installing samply (cargo)..."
 cargo install samply
+
