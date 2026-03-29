@@ -115,52 +115,6 @@ if $CHECK_MODE; then
     exit 0
 fi
 
-# --- GitHub Login Mode ---
-
-if $ME_MODE; then
-    echo -e "${BLUE}=== GitHub Login ===${NC}"
-
-    if ! command -v gh > /dev/null 2>&1; then
-        echo -e "${YELLOW}Installing gh (GitHub CLI)...${NC}"
-        sudo dnf install -y gh
-    fi
-
-    step "Logging into GitHub"
-    gh auth login
-
-    step "Configuring git credential helper"
-    gh auth setup-git
-    ok "HTTPS push/pull will now use your GitHub credentials"
-
-    step "Setting git identity"
-    read -rp "  Git name (e.g. fraugho): " git_name
-    read -rp "  Git email: " git_email
-    git config --global user.name "$git_name"
-    git config --global user.email "$git_email"
-    ok "Set user.name=$git_name, user.email=$git_email"
-
-    step "Restoring LibreWolf profile"
-    PROFILE_ZIP="$SCRIPT_DIR/data/librewolf-profile.zip"
-    if [ -f "$PROFILE_ZIP" ]; then
-        PROFILE_DIR=$(find ~/.librewolf -maxdepth 1 -name "*.default-default*" -type d | head -1)
-        if [ -z "$PROFILE_DIR" ]; then
-            echo -e "  ${YELLOW}No LibreWolf profile directory found. Launch LibreWolf once first, then re-run.${NC}"
-        else
-            echo "  Enter password for LibreWolf profile:"
-            unzip -o "$PROFILE_ZIP" -d /tmp/librewolf-restore
-            cp -a /tmp/librewolf-restore/*/* "$PROFILE_DIR/"
-            rm -rf /tmp/librewolf-restore
-            ok "Restored LibreWolf profile to $PROFILE_DIR"
-        fi
-    else
-        warn "No librewolf-profile.zip found, skipping"
-    fi
-
-    echo -e "\n${GREEN}=== GitHub login complete! ===${NC}"
-    echo "You can now clone, commit, and push over HTTPS."
-    exit 0
-fi
-
 # --- Actual Setup ---
 
 echo -e "${BLUE}=== Fedora Setup ===${NC}"
@@ -231,6 +185,45 @@ ok "Installed config and enabled greetd service"
 
 step "Setting default applications"
 "$SCRIPT_DIR/scripts/default.sh"
+
+if $ME_MODE; then
+    step "Restoring LibreWolf profile"
+    PROFILE_ZIP="$SCRIPT_DIR/data/librewolf-profile.zip"
+    if [ -f "$PROFILE_ZIP" ]; then
+        # Launch LibreWolf once to create profile dir, then kill it
+        librewolf --headless &>/dev/null &
+        sleep 3
+        pkill -f librewolf || true
+        sleep 1
+
+        PROFILE_DIR=$(find ~/.librewolf -maxdepth 1 -name "*.default-default*" -type d | head -1)
+        if [ -z "$PROFILE_DIR" ]; then
+            warn "No LibreWolf profile directory found, skipping"
+        else
+            echo "  Enter password for LibreWolf profile:"
+            unzip -o "$PROFILE_ZIP" -d /tmp/librewolf-restore
+            cp -a /tmp/librewolf-restore/*/* "$PROFILE_DIR/"
+            rm -rf /tmp/librewolf-restore
+            ok "Restored LibreWolf profile to $PROFILE_DIR"
+        fi
+    else
+        warn "No librewolf-profile.zip found, skipping"
+    fi
+
+    step "Logging into GitHub"
+    gh auth login
+
+    step "Configuring git credential helper"
+    gh auth setup-git
+    ok "HTTPS push/pull will now use your GitHub credentials"
+
+    step "Setting git identity"
+    read -rp "  Git name (e.g. fraugho): " git_name
+    read -rp "  Git email: " git_email
+    git config --global user.name "$git_name"
+    git config --global user.email "$git_email"
+    ok "Set user.name=$git_name, user.email=$git_email"
+fi
 
 echo -e "\n${GREEN}=== Setup Complete! ===${NC}"
 echo "Restart your terminal or run: source ~/.zshrc"
