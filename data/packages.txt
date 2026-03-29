@@ -6,9 +6,9 @@ greetd-tuigreet
 kitty
 rustup
 perf
-pprof
+google-pprof
 bemenu
-go
+golang
 zig
 clang
 git
@@ -19,7 +19,7 @@ zoxide
 eza
 opam
 ocaml
-adb
+android-tools
 uv
 okular
 htop
@@ -45,7 +45,7 @@ ripgrep
 fd-find
 lazygit
 git-delta
-dust
+du-dust
 tokei
 hyperfine
 fuse-libs

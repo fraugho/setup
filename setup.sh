@@ -196,9 +196,9 @@ chmod +x ~/.local/bin/LMStudio.AppImage
 ln -sf ~/.local/bin/LMStudio.AppImage ~/.local/bin/lmstudio
 ok "Installed to ~/.local/bin/lmstudio"
 
-step "Installing Claude Code (Node.js version via npm)"
-npm install -g @anthropic-ai/claude-code
-ok "Claude Code installed (Node.js — not native)"
+step "Installing Claude Code and OpenCode (via npm)"
+npm install -g @anthropic-ai/claude-code opencode-ai
+ok "Claude Code and OpenCode installed"
 
 step "Cloning dotfiles repos"
 "$SCRIPT_DIR/scripts/git.sh"
