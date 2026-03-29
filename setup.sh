@@ -78,7 +78,7 @@ if $CHECK_MODE; then
     step "Validating Flatpak app IDs"
     while IFS= read -r app || [[ -n "$app" ]]; do
         [[ -z "$app" || "$app" =~ ^# ]] && continue
-        if [[ "$app" =~ ^[a-zA-Z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*){2,}$ ]]; then
+        if [[ "$app" =~ ^[a-zA-Z][a-zA-Z0-9_-]*(\.[a-zA-Z][a-zA-Z0-9_-]*){2,}$ ]]; then
             ok "$app"
         else
             fail "$app — invalid Flatpak ID format"; ERRORS=$((ERRORS + 1))
@@ -139,6 +139,23 @@ if $ME_MODE; then
     git config --global user.email "$git_email"
     ok "Set user.name=$git_name, user.email=$git_email"
 
+    step "Restoring LibreWolf profile"
+    PROFILE_ZIP="$SCRIPT_DIR/data/librewolf-profile.zip"
+    if [ -f "$PROFILE_ZIP" ]; then
+        PROFILE_DIR=$(find ~/.librewolf -maxdepth 1 -name "*.default-default*" -type d | head -1)
+        if [ -z "$PROFILE_DIR" ]; then
+            echo -e "  ${YELLOW}No LibreWolf profile directory found. Launch LibreWolf once first, then re-run.${NC}"
+        else
+            echo "  Enter password for LibreWolf profile:"
+            unzip -o "$PROFILE_ZIP" -d /tmp/librewolf-restore
+            cp -a /tmp/librewolf-restore/*/* "$PROFILE_DIR/"
+            rm -rf /tmp/librewolf-restore
+            ok "Restored LibreWolf profile to $PROFILE_DIR"
+        fi
+    else
+        warn "No librewolf-profile.zip found, skipping"
+    fi
+
     echo -e "\n${GREEN}=== GitHub login complete! ===${NC}"
     echo "You can now clone, commit, and push over HTTPS."
     exit 0
@@ -191,10 +208,10 @@ mkdir -p ~/.config/wallpapers
 cp "$SCRIPT_DIR/wallpapers/"* ~/.config/wallpapers/
 ok "Copied to ~/.config/wallpapers/"
 
-step "Configuring Hyprland"
-mkdir -p ~/.config/hypr
-cp "$SCRIPT_DIR/config/hypr/hyprland.conf" ~/.config/hypr/
-ok "Copied hyprland.conf (works on desktop + laptop)"
+step "Configuring mako (notifications)"
+mkdir -p ~/.config/mako
+cp "$SCRIPT_DIR/config/mako/config" ~/.config/mako/
+ok "Copied mako config"
 
 step "Configuring swaylock"
 mkdir -p ~/.config/swaylock

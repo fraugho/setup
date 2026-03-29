@@ -56,3 +56,4 @@ heaptrack
 SDL2-devel
 raylib-devel
 notcurses-devel
+mako
