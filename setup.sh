@@ -220,6 +220,12 @@ ok "Copied swaylock config"
 
 step "Configuring greetd (login manager)"
 sudo cp "$SCRIPT_DIR/config/greetd/config.toml" /etc/greetd/config.toml
+for dm in sddm gdm lightdm; do
+    if systemctl is-enabled "$dm" > /dev/null 2>&1; then
+        sudo systemctl disable --now "$dm"
+        ok "Disabled $dm"
+    fi
+done
 sudo systemctl enable greetd
 ok "Installed config and enabled greetd service"
 
